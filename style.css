@@ -1,578 +1,274 @@
 @font-face {
-    font-family: "Montserrat-Medium";
-    src: url(./assets/fonts/Montserrat-Medium.ttf);
+    font-family: "WorkSans";
+    src: url(./Assets/Fonts/WorkSans-VariableFont_wght.ttf);
 }
-@font-face {
-    font-family: "Montserrat-Thin";
-    src: url(./assets/fonts/Montserrat-Thin.ttf);
-}
-@font-face {
-    font-family: "Montserrat-Bold";
-    src: url(./assets/fonts/Montserrat-Bold.ttf);
-}
-@font-face {
-    font-family: "Montserrat-SemiBold";
-    src: url(./assets/fonts/Montserrat-SemiBold.ttf);
-}
+
+/* ******************   STYLE GENERAL   ******************** */
 
 * {
     margin: 0;
     padding: 0;
+    font-family: "WorkSans";
+    font-weight: 350;
 }
 body {
-    margin: 0 auto;
-    text-align: center;
-    min-height: 100vh;
-    font-family: "Montserrat-medium";
-    overflow: unset;
+    min-height: 110px;
 }
-
-/* ***************  CONFIG <NAV>  ************** */
-
-nav {
-    display: flex;
-    height: 70px;
-    background-color: white;
-    align-items: center;
+h1 {
+    font-size: 3rem;
+    font-weight: 300;
 }
-
-.button-container {
-    display: flex;
-    width: 70%;
-    background: white;
-    align-items: center;
-    margin: 0 auto;
-    font-family: "Montserrat-bold";
-    justify-content: space-around;
+h2 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+li {
     list-style: none;
 }
-.button-container button {
-    display: flex;
-    cursor: pointer;
-    padding: 25px 5px;
-    border: none;
+p {
+    line-height: 30px;
+    padding: 30px 0;
+}
+button {
     text-transform: uppercase;
     background-color: white;
-    font-family: "Montserrat-bold";
+    border: solid 1px #c2c2c275;
+    padding: 0 50px;
+    height: 47px;
     font-size: 0.8rem;
-    height: 25px;
-    align-items: center;
-    border: 5px solid transparent;
+    font-weight: 400;
+    border-radius: 30px;
+    letter-spacing: 1px;
 }
-
 button:hover {
-    scale: 1.05;
-    color: rgb(99, 61, 189);
-    border-top: 5px solid;
-    border-top-color: #6a4aa1;
-    transition: 0.05s;
-}
-#language {
-    display: flex;
-    justify-content: center;
-    width: 83px;
-    background-color: #e0e0e0;
-    padding: 14px 0;
-    border-radius: 20px;
-    border: solid transparent;
-}
-#language:hover {
-    font-size: 0.8rem;
-    background-color: #838383;
-    color: wheat;
-    border: solid transparent;
-    transition: 0.2s;
-}
-
-/* ***************  CONFIG <HEADER>  ************** */
-
-.main-header {
-    padding: 60px;
-    background: url(./assets/img/bg.jpg) center/cover fixed;
-}
-.logo {
-    padding-top: 65px;
-}
-.logo img {
-    display: block;
-    margin: 0 auto;
-}
-header h1 {
-    color: white;
-    font-size: 1.4rem;
-    margin: 40px;
-    text-transform: uppercase;
-    text-align: center;
-}
-.main-header button {
-    display: block;
-    margin: 0px auto;
-    padding: 10px 20px;
-    border: 1px solid;
-    border-color: #fff;
-    background: transparent;
-    font-family: "arial";
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 0.7rem;
-    letter-spacing: 2px;
-}
-.main-header button:hover {
+    color: #acceda;
     cursor: pointer;
-    scale: 1.05;
-    background-color: #3727536e;
+    border: solid 1px #acceda;
 }
 
-/* ***************  CONFIG .HEADER-TEXT  ************** */
+/* ******************   HEADER   ******************** */
 
+header {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.left-part {
+    display: flex;
+    align-items: center;
+}
 .header-text {
-    display: flex;
-    background: white;
-    height: 120px;
-    align-items: center;
+    margin: 0 40px;
+    padding: 50px 0;
 }
-.header-text p {
-    width: 70%;
-    font-family: Arial;
-    font-weight: bold;
-    font-size: 0.9rem;
-    margin: 0 auto;
-    text-align: center;
-    line-height: 1.7rem;
+.right-part img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 
-/* ***************  CONFIG .ICON-PART  ************** */
+/* ******************   WOOD   ******************** */
 
-.icon-part {
-    background: black;
-}
-.icon-part-container {
-    display: flex;
-    height: 450px;
-    width: 70%;
-    align-items: center;
-    margin: 0 auto;
-}
-.icon-part-container h3 {
-    color: white;
-    margin: 10px;
-    font-family: Arial;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    text-align: center;
-}
-.icon-part-container p {
-    color: white;
-    margin: 20px;
-    font-family: Arial;
-    font-size: 0.9rem;
-    text-align: center;
-}
-.lip-logo {
-    display: block;
-    text-align: center;
-    margin-bottom: 30px;
-}
-.list-icon-part button {
-    display: block;
-    margin: 40px auto;
-    padding: 7px 20px;
-    border: solid 1px;
-    border-color: white;
-    background: transparent;
-    font-family: Arial;
-    font-size: 0.6rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: white;
-}
-.list-icon-part button:hover {
-    cursor: pointer;
-    scale: 1.05;
-    background-color: #372753;
-}
-
-/* ***************  CONFIG .NEWS-PART  ************** */
-
-.news-part {
-    background: white;
-}
-.header-news {
+.wood {
     display: grid;
-    grid-template-columns: 70% 30%;
-    height: 200px;
-    width: 65%;
-    margin: 0 auto;
-}
-
-.header-news .left-part {
-    padding: 70px 0;
-}
-.header-news .left-part h2 {
-    text-transform: uppercase;
-    font-family: "Montserrat-Medium";
-    font-weight: 100;
-    letter-spacing: 3px;
-    font-size: 1.2rem;
-}
-.header-news .left-part p {
-    font-size: 0.75rem;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.header-news .right-part {
-    display: flex;
-    align-items: center;
-}
-
-.header-news .right-part button {
-    height: 30px;
-    padding: 0 20px;
-    border: solid 1px;
-    border-color: black;
-    background: white;
-    color: black;
-    font-family: Arial;
-    text-transform: uppercase;
-    font-size: 0.6rem;
-    letter-spacing: 1px;
-}
-.header-news .right-part button:hover {
-    cursor: pointer;
-    scale: 1.05;
-    background-color: rgba(245, 222, 179, 0.39);
-}
-
-/* ***************  CONFIG LES NEWS DU CAMPUS  ************** */
-
-.main-news {
-    height: 510px;
-}
-.main-news-container {
-    display: grid;
-    width: 70%;
-    min-height: 500px;
-    margin: 0 auto;
-    grid-template-columns: 33% 34% 33%;
-}
-
-.main-news-container .mn-pic img {
-    display: block;
-    box-shadow: 0px 1px 17px 4px #b8b8c5;
-    margin: 0 auto;
-}
-
-.main-news-container h4 {
-    display: block;
-    margin: 25px auto;
-    padding: 0 25px;
-    font-family: arial;
-    font-size: 1rem;
-    font-weight: 750;
-}
-
-.main-news-container p {
-    display: block;
-    margin: 25px auto;
-    padding: 25px;
-    text-align: justify;
-    font-family: arial;
-    font-size: 0.8rem;
-    font-weight: 750;
-    line-height: 18px;
-}
-
-.mn-pic i {
-    display: flex;
-    align-items: center;
-    padding-left: 5px;
-}
-
-.mn-pic a {
-    display: flex;
-    margin: 0 25px;
-    letter-spacing: 2px;
-    text-decoration: none;
-    font-family: arial;
-    text-transform: uppercase;
-    font-size: 0.7rem;
-    font-weight: 850;
-    color: #6e2ea1;
-}
-.mn-pic {
+    grid-template-columns: 40% 60%;
     position: relative;
 }
-/*     Pour placer un élément avec le bas de la boite pour référence, le parent doit être en "position: relative;" et l'enfant en "position: absolute"; puis "bottom:0" (0 signifie qu'il sera tout en bas de la boite*/
-.link {
-    position: absolute;
-    bottom: 0;
-}
-
-.main-news-container a:hover {
-    cursor: pointer;
-    font-size: 0.75rem;
-    color: rgb(115, 114, 216);
-}
-
-/* ***************  CONFIG .CONTACT  ************** */
-
-.contact {
-    height: 600px;
-    background-color: white;
-}
-
-.contact-container {
-    display: block;
-    margin: 0 auto;
-    width: 70%;
-}
-.contact-list {
-    display: flex;
-    padding-top: 120px;
-    justify-content: center;
+.left-part-wood img {
+    object-fit: cover;
+    height: 100%;
     width: 100%;
-    margin: 0 auto;
 }
-
-.list {
-    padding: 10px;
-    width: 25%;
-}
-.list img {
-    margin: 0 25px;
-    width: 130px;
-}
-
-.list h5 {
-    display: block;
-    text-transform: uppercase;
-    font-family: arial;
-    font-size: 0.9rem;
-    margin-bottom: 15px;
-}
-
-.contact-list ul li {
-    display: block;
-    list-style: none;
-    line-height: 25px;
-    width: 100%;
-    font-size: 0.7rem;
-}
-.contact-list a {
-    display: block;
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 0.7rem;
-    font-family: arial;
-    color: #6e2ea1;
-}
-.contact-list ul:hover {
-    color: rgb(115, 114, 216);
-}
-
-.contact-list p {
-    width: 60%px;
-    line-height: 1.4rem;
-    margin-bottom: 7.5px;
-    font-family: arial;
-    font-size: 0.7rem;
-    font-weight: 800;
-}
-a:hover {
-    color: rgb(115, 114, 216);
-    font-size: 0.8rem;
-}
-.list-grid {
-    display: flex;
-    flex-direction: column;
-    width: 25%;
-    padding: 10px 0 50px 50px;
-}
-.list-grid h5 {
-    text-transform: uppercase;
-    height: 20px;
-    font-family: arial;
-    font-size: 0.9rem;
-    margin-bottom: 15px;
-}
-.list-grid h6 {
-    margin: 0;
-    padding: 4px;
-}
-.list-grid .network {
-    margin: 0;
-    padding-top: 25px;
-}
-.list-grid .copyright {
-    margin: 0;
-    padding-top: 25px;
-}
-.footer-logos .fab {
-    padding: 5px;
-}
-
-.contact-medias {
-    display: grid;
-    grid-template-columns: 25% 75%;
-    padding-top: 50px;
-}
-.medias-text h3 {
-    text-transform: uppercase;
-    height: 20px;
-    font-family: arial;
-    font-size: 0.9rem;
-}
-.medias-text p {
-    font-family: arial;
-    font-size: 0.7rem;
-    font-weight: 800;
-    padding-top: 15px;
-}
-.medias-logos {
+.right-part-wood {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+}
+.right-part-wood::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #acceda4b;
+    top: 0;
+}
+.right-part-wood::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #acceda4b;
+    bottom: 0;
+}
+.text-wood {
+    margin: 0 40px;
+    padding: 50px 0;
 }
 
-/* ***************  CONFIG <FOOTER>  ************** */
+/* ******************   BRIDGE   ******************** */
 
-footer {
-    background-color: black;
-    height: 120px;
+.bridge {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    position: relative;
 }
-footer h3 {
-    color: white;
-    text-transform: uppercase;
-    font-family: arial;
-    font-size: 0.9rem;
-    font-weight: 500;
-    height: 20px;
-    padding: 20px;
+.left-part-bridge {
+    display: flex;
+    align-items: center;
+}
+.left-part-bridge ::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #bfc7ca17;
+    bottom: 0;
+    transform: translateX(-30%);
+}
+.text-bridge {
+    margin: 0 40px;
+    padding: 50px 0;
+}
+.right-part-bridge img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+/* ******************   FORMULAIRE   ******************** */
+.form-part {
+    position: relative;
+    margin: 30px 0;
+    height: 500px;
+}
+.form-container h2 {
+    text-align: center;
+    padding: 25px;
+}
+.form-container {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+}
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 4fr;
+    grid-template-areas:
+        "l-na l-ma"
+        "na ma"
+        "l-me l-me"
+        "me me";
+    width: 100%;
+}
+#l-na {
+    grid-area: l-na;
     text-align: center;
 }
-footer img {
-    scale: 0.9;
+#l-ma {
+    grid-area: l-ma;
+    text-align: center;
+}
+#name {
+    grid-area: na;
+}
+#mail {
+    grid-area: ma;
+}
+#l-me {
+    grid-area: l-me;
+    text-align: center;
+}
+input,
+textarea {
+    border-radius: 3px;
+    border: solid 1px #b0bcc059;
+    margin: 20px 3px;
+}
+input {
+    height: 30px;
+}
+textarea {
+    grid-area: me;
+    resize: none;
+    height: 150px;
+}
+label {
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+.form-container::after {
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 1px;
+    background-color: #acceda6e;
+    bottom: 0;
+    transform: translateX(-11%);
+}
+
+.form-container button {
+    display: block;
+    margin: 30px auto;
+}
+
+/* ******************   FOOTER   ******************** */
+
+footer {
+    height: 200px;
 }
 footer ul {
     display: flex;
-    width: 70%;
-    margin: 0 auto 10px;
+    max-width: 50%;
     justify-content: space-between;
+    margin: 50px auto;
+    font-size: 1rem;
+}
+ul li {
+    height: 45px;
+    width: 45px;
+    border: solid 1px #acceda;
+    border-radius: 40px;
+}
+ul a {
+    display: flex;
+    height: 45px;
     align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+}
+ul a:hover {
+    color: #acceda;
 }
 
-/* **************  RESPONSIVE  ****************/
+/* ******************   RESPONSIVE / MEDIA QUERIES    ***************** */
 
-@media screen and (max-width: 1120px) {
-    .button-container {
-        width: 90%;
-    }
-    .header-text p {
-        width: 90%;
-    }
-    .icon-part-container {
-        width: 90%;
-    }
-    .main-news-container {
-        width: 90%;
-    }
-    .contact-container {
-        width: 90%;
+@media screen and (max-width: 550px) {
+    .form-part {
+        height: 500px;
     }
     footer ul {
-        display: flex;
-        width: 90%;
+        /* margin: 0 auto; */
+        width: 250px;
+    }
+    footer li {
+        width: 50px;
+        height: 50px;
     }
 }
-@media screen and (max-width: 880px) {
-    /*   Ne plus afficher la partie <nav> pour les besoins du responsive (media query)  */
-    nav {
-        display: none;
-    }
-    .main-header img {
-        width: 80%;
-    }
-    .main-header h1 {
-        font-size: 3.5vw;
-    }
-
-    .icon-part-container {
-        display: block;
-        height: 1150px;
-    }
-    .header-news {
-        display: block;
-        text-align: center;
-        height: 300px;
-    }
-    .header-news .right-part {
-        display: block;
-        text-align: center;
-    }
-    .main-news-container {
-        display: block;
-        height: 1500px;
-    }
-    .news-part {
-        height: 1700px;
-    }
-    .main-news {
-        height: 1500px;
-    }
-    .main-news p {
-        padding: 0 25px;
-    }
-    .mn-pic {
-        height: 480px;
-        width: 70%;
-        margin: 0 auto;
-    }
-    .link {
-        position: relative;
-        padding: 20px 0;
-    }
-    .contact {
-        height: 650px;
-    }
-    .contact-medias {
-        display: block;
-        height: 150px;
-        /* margin: 30px 0; */
-    }
-    .medias-text {
-        display: block;
-        margin-bottom: 30px;
-        text-align: center;
-    }
-    .medias-logos .img {
-        justify-content: center;
-        padding: 5px;
-    }
-    footer ul {
-        justify-content: center;
-    }
-    footer ul li img {
-        width: 80%;
-    }
-}
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 500px) {
     header {
-        height: auto;
+        display: block;
     }
-}
-@media screen and (max-width: 700px) {
-    .contact {
+    .wood {
+        display: block;
+    }
+    .left-part-wood {
         display: none;
     }
-}
-@media screen and (max-width: 530px) {
-    .news-part {
-        height: 1770px;
+    .bridge {
+        display: block;
     }
-}
-@media screen and (max-width: 480px) {
-    .header-text {
-        padding: 20px;
+    .right-part-bridge {
+        display: none;
     }
 }
