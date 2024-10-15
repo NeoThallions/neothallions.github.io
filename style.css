@@ -1,398 +1,578 @@
-/* ***********   création de variables pour les couleurs  *********/
-:root {
-    --color1: #f4f1df;
-    --color2: #f7ecd5;
-    --section1: #fff8df;
-    --section2: #eff1f5;
-    --label1: #01df74;
-    --label2: #00ffff;
-    --footer: #524838;
-}
-/* ************     détermination des fonts     **************** */
-
 @font-face {
-    font-family: "AdventPro";
-    src: url(./assets/fonts/AdventPro-Regular.ttf);
+    font-family: "Montserrat-Medium";
+    src: url(./assets/fonts/Montserrat-Medium.ttf);
 }
 @font-face {
-    font-family: "AdventProMedium";
-    src: url(./assets/fonts/AdventPro_SemiExpanded-Medium.ttf);
+    font-family: "Montserrat-Thin";
+    src: url(./assets/fonts/Montserrat-Thin.ttf);
 }
 @font-face {
-    font-family: "DancingScript";
-    src: url(./assets/fonts/DancingScript-Regular.ttf);
+    font-family: "Montserrat-Bold";
+    src: url(./assets/fonts/Montserrat-Bold.ttf);
 }
-
-/* ************     paramètres généraux     **************** */
+@font-face {
+    font-family: "Montserrat-SemiBold";
+    src: url(./assets/fonts/Montserrat-SemiBold.ttf);
+}
 
 * {
     margin: 0;
     padding: 0;
 }
 body {
+    margin: 0 auto;
     text-align: center;
-    font-family: "Adventpro";
     min-height: 100vh;
-    background-color: var(--section1);
-}
-li {
-    list-style: none;
-}
-a {
-    text-decoration: none;
-}
-a:focus {
-    color: black;
+    font-family: "Montserrat-medium";
+    overflow: unset;
 }
 
-/* ************     NAV     **************** */
+/* ***************  CONFIG <NAV>  ************** */
 
 nav {
-    display: grid;
-    grid-template-columns: 30% 70%;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    background-color: var(--color1);
-    position: fixed;
-    /* passer le <nav> en 1er plan car le '.head-container', du fait de sa 'position relative', fera passer le <nav> en second plan qui aura pour conséquence d'inhiber les ':hover' sur les boutons de la <nav> */
-    z-index: 1;
-}
-nav div {
     display: flex;
-    margin-left: 30px;
+    height: 70px;
+    background-color: white;
+    align-items: center;
 }
-button {
-    height: 20px;
-    width: 100px;
-    font-family: "dancingscript";
-    text-transform: capitalize;
-    font-size: 1.2rem;
-    font-weight: 600;
+
+.button-container {
+    display: flex;
+    width: 70%;
+    background: white;
+    align-items: center;
+    margin: 0 auto;
+    font-family: "Montserrat-bold";
+    justify-content: space-around;
+    list-style: none;
+}
+.button-container button {
+    display: flex;
+    cursor: pointer;
+    padding: 25px 5px;
     border: none;
-    background: var(--color1);
-}
-button:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-}
-
-ul {
-    display: flex;
-    text-transform: capitalize;
-    justify-content: flex-end;
+    text-transform: uppercase;
+    background-color: white;
+    font-family: "Montserrat-bold";
+    font-size: 0.8rem;
+    height: 25px;
     align-items: center;
-    color: black;
-    font-size: 1.1rem;
-}
-li {
-    padding: 20px 20px;
-}
-li:hover {
-    cursor: pointer;
-    transform: scale(1.1);
+    border: 5px solid transparent;
 }
 
-/* *********************    HEADER     ************************* */
-
-header {
-    height: 800px;
-    background: url(./assets/img/image-principale.JPG) center/cover fixed;
+button:hover {
+    scale: 1.05;
+    color: rgb(99, 61, 189);
+    border-top: 5px solid;
+    border-top-color: #6a4aa1;
+    transition: 0.05s;
 }
-.header-container {
-    position: relative;
-    padding-top: 180px;
+#language {
+    display: flex;
+    justify-content: center;
+    width: 83px;
+    background-color: #e0e0e0;
+    padding: 14px 0;
+    border-radius: 20px;
+    border: solid transparent;
+}
+#language:hover {
+    font-size: 0.8rem;
+    background-color: #838383;
+    color: wheat;
+    border: solid transparent;
+    transition: 0.2s;
+}
+
+/* ***************  CONFIG <HEADER>  ************** */
+
+.main-header {
+    padding: 60px;
+    background: url(./assets/img/bg.jpg) center/cover fixed;
+}
+.logo {
+    padding-top: 65px;
+}
+.logo img {
+    display: block;
+    margin: 0 auto;
 }
 header h1 {
-    padding-bottom: 50px;
-    font-family: "DancingScript";
-    font-size: 5.5rem;
-    color: var(--color2);
-    text-shadow: 1px 3px 5px black;
-}
-header h2:after {
-    content: "";
-    position: absolute;
-    height: 1px;
-    width: 340px;
-    background-color: rgba(245, 222, 179, 0.651);
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 90px;
-    box-shadow: 1px 3px 5px wheat;
-}
-header h2 {
-    padding-top: 50px;
-    font-family: "AdventProMedium";
-    font-size: 2.3rem;
-    font-weight: 500;
-    color: var(--color2);
-    text-shadow: 1px 3px 5px black;
-}
-
-/* *********************        section-1      *********************** */
-
-.section-1 {
-    background-color: var(--section1);
-    height: 650px;
-}
-.section-1 h2 {
-    padding: 60px 0 30px;
-    font-size: 2.3rem;
-}
-.section-1 p {
-    width: 60%;
-    margin: 0 auto;
-    text-align: justify;
-    font-weight: 500;
-}
-.container-flex {
-    display: flex;
-    margin: 40px;
-    justify-content: space-around;
-}
-.mn-pic {
-    padding: 20px;
-}
-.mn-pic h3 {
-    padding: 20px;
-    font-family: "DancingScript";
+    color: white;
     font-size: 1.4rem;
-}
-.mn-pic img {
-    border-radius: 10px;
-    box-shadow: 6px 4px 11px 0px rgba(0, 0, 0, 0.425);
-}
-.mn-pic img:hover {
-    transform: scale(1.04);
-    transition: 0.2s;
-}
-
-/* *********************        section-2      *********************** */
-
-.section-2 {
-    background-color: var(--section2);
-    min-height: auto;
-}
-.section-2 h2 {
-    padding: 60px 0 30px;
-    font-size: 2.3rem;
+    margin: 40px;
     text-transform: uppercase;
+    text-align: center;
 }
-.section-2 h3 {
-    padding: 10px;
+.main-header button {
+    display: block;
+    margin: 0px auto;
+    padding: 10px 20px;
+    border: 1px solid;
+    border-color: #fff;
+    background: transparent;
+    font-family: "arial";
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
 }
-.section-2 img {
-    box-shadow: 6px 4px 11px 3px rgba(0, 0, 0, 0.425);
+.main-header button:hover {
+    cursor: pointer;
+    scale: 1.05;
+    background-color: #3727536e;
 }
-.section-2 .grid-container {
-    display: grid;
-    width: 80%;
+
+/* ***************  CONFIG .HEADER-TEXT  ************** */
+
+.header-text {
+    display: flex;
+    background: white;
+    height: 120px;
+    align-items: center;
+}
+.header-text p {
+    width: 70%;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.7rem;
+}
+
+/* ***************  CONFIG .ICON-PART  ************** */
+
+.icon-part {
+    background: black;
+}
+.icon-part-container {
+    display: flex;
+    height: 450px;
+    width: 70%;
+    align-items: center;
     margin: 0 auto;
 }
-.ocean {
-    display: flex;
-    padding: 20px;
-}
-.ocean img {
-    width: 45%;
-}
-.ocean h3,
-.phare h3 {
-    background-color: #01df74;
-    transform: translate(-5vh, 3vh);
-    box-shadow: 3px 4px 0px 1px rgba(44, 170, 55, 0.89);
-}
-.chateau h3,
-.vignes h3 {
-    background-color: #19e1fc;
-    transform: translate(5vh, 3vh);
-    box-shadow: -3px 4px 0px 1px rgba(41, 141, 172, 0.897);
-}
-.chateau {
-    display: flex;
-    justify-content: flex-end;
-    padding: 20px;
-}
-.chateau img {
-    width: 45%;
-}
-
-.phare {
-    display: flex;
-    padding: 20px;
-}
-.phare img {
-    width: 45%;
-}
-.vignes {
-    display: flex;
-    justify-content: flex-end;
-    padding: 20px;
-}
-.vignes img {
-    width: 45%;
-}
-
-/* *********************       FOOTER     *********************** */
-
-footer {
-    position: relative;
-    background-color: var(--footer);
-    min-height: auto;
-}
-footer h2 {
-    padding: 60px 0 30px;
-    font-size: 2.3rem;
+.icon-part-container h3 {
+    color: white;
+    margin: 10px;
+    font-family: Arial;
+    font-size: 0.9rem;
     text-transform: uppercase;
-    color: var(--color1);
+    text-align: center;
 }
-form {
-    display: grid;
-    width: 40%;
-    margin: 10px auto;
-    gap: 3px;
+.icon-part-container p {
+    color: white;
+    margin: 20px;
+    font-family: Arial;
+    font-size: 0.9rem;
+    text-align: center;
 }
-form input {
-    font-family: "AdventProMedium";
-    height: 30px;
-    border-radius: 8px;
-    border: none;
-    padding: 10px;
+.lip-logo {
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
 }
-textarea {
-    font-family: "AdventProMedium";
-    height: 100px;
-    resize: none;
-    border-radius: 8px;
-    border: none;
-    padding: 10px;
+.list-icon-part button {
+    display: block;
+    margin: 40px auto;
+    padding: 7px 20px;
+    border: solid 1px;
+    border-color: white;
+    background: transparent;
+    font-family: Arial;
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
 }
-#send {
-    font-family: "AdventProMedium";
-    font-size: 1.3rem;
-    background-color: var(--color1);
-    color: var(--footer);
-    width: 95%;
-    height: 45px;
-    margin: 5px auto;
-    border-radius: 8px;
-    border: none;
-}
-#send:hover {
+.list-icon-part button:hover {
     cursor: pointer;
-    background-color: var(--footer);
-    color: var(--color1);
-    border: 1px solid var(--color1);
-    transition: 0.2s;
+    scale: 1.05;
+    background-color: #372753;
 }
-.copy-rzo {
+
+/* ***************  CONFIG .NEWS-PART  ************** */
+
+.news-part {
+    background: white;
+}
+.header-news {
     display: grid;
-    width: 80%;
-    margin: 100px auto 0;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 70% 30%;
+    height: 200px;
+    width: 65%;
+    margin: 0 auto;
 }
 
-footer:after {
-    content: "";
-    position: absolute;
-    width: 75%;
-    height: 1px;
-    background-color: var(--color1);
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 100px;
+.header-news .left-part {
+    padding: 70px 0;
+}
+.header-news .left-part h2 {
+    text-transform: uppercase;
+    font-family: "Montserrat-Medium";
+    font-weight: 100;
+    letter-spacing: 3px;
+    font-size: 1.2rem;
+}
+.header-news .left-part p {
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
-.copyright {
+.header-news .right-part {
     display: flex;
     align-items: center;
-    color: var(--color1);
-}
-.copyright h4 {
-    transform: translateX(5px);
-}
-.rzo i {
-    color: var(--color1);
-}
-.rzo i:hover {
-    transform: scale(1.1);
 }
 
-/* *******************  RESPONSIVE / MEDIA QUERIES ********************* */
+.header-news .right-part button {
+    height: 30px;
+    padding: 0 20px;
+    border: solid 1px;
+    border-color: black;
+    background: white;
+    color: black;
+    font-family: Arial;
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+}
+.header-news .right-part button:hover {
+    cursor: pointer;
+    scale: 1.05;
+    background-color: rgba(245, 222, 179, 0.39);
+}
 
-@media screen and (max-width: 840px) {
-    body {
-        overflow: scroll;
+/* ***************  CONFIG LES NEWS DU CAMPUS  ************** */
+
+.main-news {
+    height: 510px;
+}
+.main-news-container {
+    display: grid;
+    width: 70%;
+    min-height: 500px;
+    margin: 0 auto;
+    grid-template-columns: 33% 34% 33%;
+}
+
+.main-news-container .mn-pic img {
+    display: block;
+    box-shadow: 0px 1px 17px 4px #b8b8c5;
+    margin: 0 auto;
+}
+
+.main-news-container h4 {
+    display: block;
+    margin: 25px auto;
+    padding: 0 25px;
+    font-family: arial;
+    font-size: 1rem;
+    font-weight: 750;
+}
+
+.main-news-container p {
+    display: block;
+    margin: 25px auto;
+    padding: 25px;
+    text-align: justify;
+    font-family: arial;
+    font-size: 0.8rem;
+    font-weight: 750;
+    line-height: 18px;
+}
+
+.mn-pic i {
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+}
+
+.mn-pic a {
+    display: flex;
+    margin: 0 25px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-family: arial;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: 850;
+    color: #6e2ea1;
+}
+.mn-pic {
+    position: relative;
+}
+/*     Pour placer un élément avec le bas de la boite pour référence, le parent doit être en "position: relative;" et l'enfant en "position: absolute"; puis "bottom:0" (0 signifie qu'il sera tout en bas de la boite*/
+.link {
+    position: absolute;
+    bottom: 0;
+}
+
+.main-news-container a:hover {
+    cursor: pointer;
+    font-size: 0.75rem;
+    color: rgb(115, 114, 216);
+}
+
+/* ***************  CONFIG .CONTACT  ************** */
+
+.contact {
+    height: 600px;
+    background-color: white;
+}
+
+.contact-container {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+}
+.contact-list {
+    display: flex;
+    padding-top: 120px;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.list {
+    padding: 10px;
+    width: 25%;
+}
+.list img {
+    margin: 0 25px;
+    width: 130px;
+}
+
+.list h5 {
+    display: block;
+    text-transform: uppercase;
+    font-family: arial;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.contact-list ul li {
+    display: block;
+    list-style: none;
+    line-height: 25px;
+    width: 100%;
+    font-size: 0.7rem;
+}
+.contact-list a {
+    display: block;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 0.7rem;
+    font-family: arial;
+    color: #6e2ea1;
+}
+.contact-list ul:hover {
+    color: rgb(115, 114, 216);
+}
+
+.contact-list p {
+    width: 60%px;
+    line-height: 1.4rem;
+    margin-bottom: 7.5px;
+    font-family: arial;
+    font-size: 0.7rem;
+    font-weight: 800;
+}
+a:hover {
+    color: rgb(115, 114, 216);
+    font-size: 0.8rem;
+}
+.list-grid {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    padding: 10px 0 50px 50px;
+}
+.list-grid h5 {
+    text-transform: uppercase;
+    height: 20px;
+    font-family: arial;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+.list-grid h6 {
+    margin: 0;
+    padding: 4px;
+}
+.list-grid .network {
+    margin: 0;
+    padding-top: 25px;
+}
+.list-grid .copyright {
+    margin: 0;
+    padding-top: 25px;
+}
+.footer-logos .fab {
+    padding: 5px;
+}
+
+.contact-medias {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    padding-top: 50px;
+}
+.medias-text h3 {
+    text-transform: uppercase;
+    height: 20px;
+    font-family: arial;
+    font-size: 0.9rem;
+}
+.medias-text p {
+    font-family: arial;
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding-top: 15px;
+}
+.medias-logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ***************  CONFIG <FOOTER>  ************** */
+
+footer {
+    background-color: black;
+    height: 120px;
+}
+footer h3 {
+    color: white;
+    text-transform: uppercase;
+    font-family: arial;
+    font-size: 0.9rem;
+    font-weight: 500;
+    height: 20px;
+    padding: 20px;
+    text-align: center;
+}
+footer img {
+    scale: 0.9;
+}
+footer ul {
+    display: flex;
+    width: 70%;
+    margin: 0 auto 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* **************  RESPONSIVE  ****************/
+
+@media screen and (max-width: 1120px) {
+    .button-container {
+        width: 90%;
     }
-    .container-flex {
-        display: grid;
+    .header-text p {
+        width: 90%;
     }
-    .section-1 {
-        height: auto;
+    .icon-part-container {
+        width: 90%;
+    }
+    .main-news-container {
+        width: 90%;
+    }
+    .contact-container {
+        width: 90%;
+    }
+    footer ul {
+        display: flex;
+        width: 90%;
     }
 }
-@media screen and (max-width: 780px) {
-    .ocean,
-    .chateau,
-    .phare,
-    .vignes {
-        display: block;
+@media screen and (max-width: 880px) {
+    /*   Ne plus afficher la partie <nav> pour les besoins du responsive (media query)  */
+    nav {
+        display: none;
     }
-    .ocean h3,
-    .phare h3 {
-        background-color: #01df74;
-        transform: translate(60%, -15px);
-        box-shadow: 3px 4px 0px 1px rgba(44, 170, 55, 0.89);
-    }
-    .chateau h3,
-    .vignes h3 {
-        background-color: #19e1fc;
-        transform: translate(150%, 10px);
-        box-shadow: 3px 4px 0px 1px rgba(41, 141, 172, 0.897);
-    }
-    .section-2 img {
+    .main-header img {
         width: 80%;
     }
-    .section-2 h3 {
-        font-size: 0.7rem;
-        width: 100px;
+    .main-header h1 {
+        font-size: 3.5vw;
     }
-}
-@media screen and (max-width: 560px) {
-    nav div {
-        height: auto;
+
+    .icon-part-container {
+        display: block;
+        height: 1150px;
+    }
+    .header-news {
+        display: block;
+        text-align: center;
+        height: 300px;
+    }
+    .header-news .right-part {
+        display: block;
+        text-align: center;
+    }
+    .main-news-container {
+        display: block;
+        height: 1500px;
+    }
+    .news-part {
+        height: 1700px;
+    }
+    .main-news {
+        height: 1500px;
+    }
+    .main-news p {
+        padding: 0 25px;
+    }
+    .mn-pic {
+        height: 480px;
+        width: 70%;
         margin: 0 auto;
     }
-    nav li {
+    .link {
+        position: relative;
+        padding: 20px 0;
+    }
+    .contact {
+        height: 650px;
+    }
+    .contact-medias {
+        display: block;
+        height: 150px;
+        /* margin: 30px 0; */
+    }
+    .medias-text {
+        display: block;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .medias-logos .img {
+        justify-content: center;
         padding: 5px;
     }
-    nav ul {
-        font-size: 0.9rem;
+    footer ul {
+        justify-content: center;
     }
-    .section-2 h2 {
-        font-size: 2rem;
+    footer ul li img {
+        width: 80%;
     }
-    .section-2 img {
-        width: 100%;
+}
+@media screen and (max-width: 670px) {
+    header {
+        height: auto;
     }
-    .section-2 h3 {
-        font-size: 0.7rem;
-        width: 100px;
+}
+@media screen and (max-width: 700px) {
+    .contact {
+        display: none;
     }
-    .ocean h3,
-    .phare h3 {
-        background-color: #01df74;
-        transform: translate(20%, -15px);
-        box-shadow: 3px 4px 0px 1px rgba(44, 170, 55, 0.89);
+}
+@media screen and (max-width: 530px) {
+    .news-part {
+        height: 1770px;
     }
-    .chateau h3,
-    .vignes h3 {
-        background-color: #19e1fc;
-        transform: translate(90%, 10px);
-        box-shadow: 3px 4px 0px 1px rgba(41, 141, 172, 0.897);
-    }
-    form {
-        width: 70%;
+}
+@media screen and (max-width: 480px) {
+    .header-text {
+        padding: 20px;
     }
 }
