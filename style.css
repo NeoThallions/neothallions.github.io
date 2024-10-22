@@ -30,23 +30,13 @@ body {
     font-family: "Montserrat-medium";
     overflow: unset;
 }
-.main-header::before {
-    content: "By Thallions";
-    font-family: "DancingScript";
-    color: antiquewhite;
-    position: absolute;
-    top: 90px;
-    right: 40px;
-    font-size: 1.2rem;
-    font-weight: 500;
-}
 
 /* ***************  CONFIG <NAV>  ************** */
 
 nav {
     display: flex;
     height: 70px;
-    background-color: white;
+    /* background-color: white; */
     align-items: center;
 }
 
@@ -100,6 +90,17 @@ button:hover {
 
 /* ***************  CONFIG <HEADER>  ************** */
 
+.By-T {
+    font-family: "DancingScript";
+    height: 1px;
+    text-align: right;
+    padding-right: 30px;
+    background: black;
+    color: antiquewhite;
+    font-size: 1.2rem;
+    font-weight: 500;
+    /* z-index: 2; */
+}
 .main-header {
     padding: 60px;
     background: url(./assets/img/bg.webp) center/cover fixed;
@@ -574,10 +575,17 @@ footer ul {
     header {
         height: auto;
     }
+    .By-T {
+        font-size: 0.7rem;
+        font-weight: 50;
+    }
 }
 @media screen and (max-width: 700px) {
     .contact {
         display: none;
+    }
+    .mn-pic {
+        height: 550px;
     }
 }
 @media screen and (max-width: 530px) {
