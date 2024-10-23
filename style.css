@@ -587,10 +587,13 @@ footer ul {
     .mn-pic {
         height: 550px;
     }
-}
-@media screen and (max-width: 530px) {
+    .main-news {
+        height: 2000px;
+    }
     .news-part {
-        height: 1770px;
+        height: 1900px;
+    }
+    @media screen and (max-width: 530px) {
     }
 }
 @media screen and (max-width: 480px) {
