@@ -27,6 +27,7 @@ nav {
             align-items: center;
             font-size: 0.7rem;
             padding: 0px 15px;
+            user-select: none;
 
             &:first-child {
                 background-color: $grey1;
