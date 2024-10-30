@@ -1,0 +1,120 @@
+footer {
+    position: relative;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: $grey1;
+
+    .left-part {
+        border-right: solid 1px $grey3;
+
+        form {
+            padding: 40px 0;
+            width: 80%;
+            margin: 0 auto;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: $font1;
+            font-size: 0.7rem;
+            text-align: left;
+            color: $grey2;
+
+            div {
+
+                input,
+                textarea {
+                    width: 100%;
+                    height: 40px;
+                    margin: 20px 0;
+                    background-color: $grey1;
+                    border: solid 1px $grey3;
+
+                }
+
+                textarea {
+                    height: 150px;
+                    resize: none;
+                }
+            }
+
+        }
+
+        #button {
+            margin-top: 20px;
+            width: 180px;
+            height: 50px;
+            border: solid 2px $grey2;
+            background-color: $white;
+            color: $grey2;
+            text-transform: uppercase;
+            font-family: $font1;
+            letter-spacing: 3px;
+        }
+
+        #button:hover {
+            background-color: $grey2;
+            border: $grey1;
+            color: $grey1;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+    }
+
+    .right-part {
+        display: grid;
+        grid-template-columns: 25% 75%;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        align-items: center;
+
+        h5 {
+            padding-left: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: $font1;
+            font-size: 0.7rem;
+            text-align: left;
+            color: $grey2;
+        }
+
+        p {
+            font-size: 0.8rem;
+            color: rgb(172, 172, 172);
+            text-align: left;
+            line-height: 30px;
+            padding-left: 50px;
+        }
+
+        ul {
+            display: flex;
+            padding-left: 50px;
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 10px;
+                border: solid 1px $grey3;
+                border-radius: 100px;
+                height: 30px;
+                width: 30px;
+            }
+        }
+
+        @media screen and (max-width: 620px) {
+            padding: 50px 0;
+        }
+    }
+
+    @media screen and (max-width: 620px) {
+        display: block;
+    }
+
+    &::after {
+        content: "by Thallions";
+        font-family: $font3;
+        color: $grey2;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
+}
