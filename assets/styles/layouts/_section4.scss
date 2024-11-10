@@ -1,0 +1,147 @@
+.section-4 {
+    margin-bottom: 150px;
+
+    @media screen and (max-width: 810px) {
+        display: none;
+    }
+
+    .litle-header {
+        @include litle-head;
+
+        h3 {
+            font-size: 1.7rem;
+            letter-spacing: 1px;
+            color: $white-text;
+            padding: 7px;
+        }
+
+        img {
+            margin: 30px;
+            height: 30px;
+
+            @media screen and (max-width: 1020px) {
+                height: 40px;
+            }
+
+
+        }
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 1fr 1fr;
+        width: 70%;
+        margin: 0 auto;
+        grid-template-areas:
+            "hb1 rp"
+            "hb2 rp";
+        // si on fait 'gap:20px' les 20px verticaux vont se répercuter à droite et le bloc ne sera pas centré. Pour qu'il y ai tout de même une séparation entre les parties gauche et droite, on ajoute 'margin-right: 20px;' à '.horizon-bloc '.
+        row-gap: 20px;
+
+        .horizon-bloc {
+            display: grid;
+            grid-template-columns: 30% 70%;
+            margin-right: 20px;
+
+            .text {
+                display: grid;
+                @include text-event;
+                text-align-last: left;
+            }
+        }
+
+        #img-1 {
+            background: url(../img/event-01.webp)center/cover;
+        }
+
+        #img-2 {
+            background: url(../img/event-02.webp)center/cover;
+        }
+
+        .img {
+            display: flex;
+            align-items: center;
+
+        }
+
+        .date {
+            background-color: $black-background;
+            margin: 0 auto;
+            height: 70px;
+            width: 70px;
+            color: $white-text;
+
+            h3 {
+                font-family: $font3;
+                font-size: 1.5rem;
+                padding: 0;
+                margin-top: 10px;
+            }
+        }
+
+
+        .right-part {
+            background: url(../img/event-03.webp)center/cover;
+
+
+            .container {
+                @include text-event;
+                height: auto;
+                margin: 20px;
+                padding-top: 0;
+
+
+                .text {
+                    display: grid;
+                    @include text-event;
+                    text-align-last: left;
+
+                    @media screen and (max-width: 1000px) {
+                        margin: 0;
+
+                        button {
+                            margin: 0;
+                        }
+                    }
+                }
+
+
+                .date {
+                    margin-bottom: 30px;
+
+                    @media screen and (max-width: 1000px) {
+                        margin: 0 auto;
+                    }
+
+                    h3 {
+                        padding-top: 10px;
+                        margin: 0;
+                    }
+
+                    p {
+                        font-family: $font3;
+                        color: $white-text;
+                        margin: 0;
+                    }
+                }
+
+                button {
+                    margin-top: 30px;
+                }
+            }
+        }
+
+        #bloc-1 {
+            grid-area: hb1;
+        }
+
+        #bloc-2 {
+            grid-area: hb2;
+        }
+
+        #bloc-3 {
+            grid-area: rp;
+        }
+    }
+}
