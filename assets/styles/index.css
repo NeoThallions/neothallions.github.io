@@ -23,7 +23,7 @@ body {
   background-color: rgb(33, 33, 30);
   text-align: center;
   margin: 0 auto;
-  font-family: poppins, arial;
+  font-family: poppins, serif;
   max-width: 1515px;
   min-height: 100vh;
   min-width: 340px;
@@ -39,14 +39,14 @@ a {
 }
 
 h2 {
-  font-family: allura, arial;
+  font-family: allura, cursive;
   color: rgb(173, 135, 101);
   font-weight: 100;
   font-size: 1.9rem;
 }
 
 p {
-  font-family: roboto, arial;
+  font-family: roboto, serif;
 }
 
 button {
@@ -109,7 +109,7 @@ footer .grid-container .left-part {
   }
 }
 footer .grid-container .left-part h3 {
-  font-family: allura, arial;
+  font-family: allura, cursive;
   font-weight: 100;
   color: rgb(197, 149, 108);
   text-transform: capitalize;
@@ -139,7 +139,7 @@ footer .grid-container .right-part {
 footer .grid-container .right-part h5 {
   color: rgb(238, 238, 238);
   text-transform: uppercase;
-  font-family: roboto, arial;
+  font-family: roboto, serif;
   margin: 10px 0;
 }
 footer .grid-container .right-part input {
@@ -188,7 +188,7 @@ footer .grid-container .right-part li i:hover {
 }
 footer::after {
   content: "by Thallions";
-  font-family: allura, arial;
+  font-family: allura, cursive;
   font-size: 1.3rem;
   color: rgb(197, 149, 108);
   position: absolute;
@@ -253,7 +253,7 @@ header nav .ul-nav {
           justify-content: space-between;
   margin: 0 60px;
   text-transform: uppercase;
-  font-family: roboto, arial;
+  font-family: roboto, serif;
   font-size: 0.7rem;
 }
 @media screen and (max-width: 920px) {
@@ -297,7 +297,7 @@ header .header-content img {
   margin: 40px 0;
 }
 header .header-content p {
-  font-family: roboto, arial;
+  font-family: roboto, serif;
   color: rgb(230, 230, 230);
   text-transform: uppercase;
   width: 80%;
@@ -357,7 +357,7 @@ header .header-content p {
 }
 .section-1 .part-container .left-part h4,
 .section-1 .part-container .left-part h5 {
-  font-family: roboto, arial;
+  font-family: roboto, serif;
 }
 .section-1 .part-container .left-part h5 {
   text-transform: uppercase;
@@ -407,7 +407,7 @@ header .header-content p {
           justify-content: space-between;
   width: 55%;
   margin: 0 auto;
-  font-family: roboto, arial;
+  font-family: roboto, serif;
   color: rgb(230, 230, 230);
 }
 @media screen and (max-width: 920px) {
@@ -472,7 +472,7 @@ header .header-content p {
 }
 .section-2 .menu .price {
   color: rgb(197, 149, 108);
-  font-family: roboto, arial;
+  font-family: roboto, serif;
   font-weight: 600;
   padding-left: 10px;
 }
@@ -487,7 +487,7 @@ header .header-content p {
 }
 .section-2 .menu .text .title-dish {
   text-transform: uppercase;
-  font-family: roboto, arial;
+  font-family: roboto, serif;
   font-size: 0.8rem;
 }
 .section-2 .menu .text .ingredients {
@@ -563,7 +563,7 @@ header .header-content p {
   }
 }
 .section-3 .grid-container .left-part-container .left-part .days-hours h2 {
-  font-family: poppins, arial;
+  font-family: poppins, serif;
   text-transform: uppercase;
   font-size: 1rem;
   margin: 30px 0 5px;
@@ -644,7 +644,7 @@ header .header-content p {
 }
 .section-3 .grid-container .right-part form input {
   border: none;
-  font-family: roboto, arial;
+  font-family: roboto, serif;
   background-color: rgb(238, 238, 238);
   border-bottom: 1px solid rgba(43, 30, 23, 0.233);
   height: 40px;
@@ -663,7 +663,7 @@ header .header-content p {
   margin: 40px auto;
   width: 150px;
   height: 40px;
-  font-family: poppins, arial;
+  font-family: poppins, serif;
   letter-spacing: 3px;
   color: rgb(230, 230, 230);
   background-color: rgb(33, 33, 30);
@@ -737,14 +737,14 @@ header .header-content p {
        text-align-last: left;
 }
 .section-4 .grid-container .horizon-bloc .text h4 {
-  font-family: roboto, arial;
+  font-family: roboto, serif;
   text-transform: capitalize;
   letter-spacing: 1px;
   font-size: 1.1rem;
   font-weight: 100;
 }
 .section-4 .grid-container .horizon-bloc .text p {
-  font-family: roboto, arial;
+  font-family: roboto, serif;
   text-transform: capitalize;
   color: rgba(128, 128, 128, 0.562);
   font-size: 0.8rem;
@@ -782,7 +782,7 @@ header .header-content p {
   color: rgb(230, 230, 230);
 }
 .section-4 .grid-container .date h3 {
-  font-family: roboto, arial;
+  font-family: roboto, serif;
   font-size: 1.5rem;
   padding: 0;
   margin-top: 10px;
@@ -798,14 +798,14 @@ header .header-content p {
   padding-top: 0;
 }
 .section-4 .grid-container .right-part .container h4 {
-  font-family: roboto, arial;
+  font-family: roboto, serif;
   text-transform: capitalize;
   letter-spacing: 1px;
   font-size: 1.1rem;
   font-weight: 100;
 }
 .section-4 .grid-container .right-part .container p {
-  font-family: roboto, arial;
+  font-family: roboto, serif;
   text-transform: capitalize;
   color: rgba(128, 128, 128, 0.562);
   font-size: 0.8rem;
@@ -829,14 +829,14 @@ header .header-content p {
        text-align-last: left;
 }
 .section-4 .grid-container .right-part .container .text h4 {
-  font-family: roboto, arial;
+  font-family: roboto, serif;
   text-transform: capitalize;
   letter-spacing: 1px;
   font-size: 1.1rem;
   font-weight: 100;
 }
 .section-4 .grid-container .right-part .container .text p {
-  font-family: roboto, arial;
+  font-family: roboto, serif;
   text-transform: capitalize;
   color: rgba(128, 128, 128, 0.562);
   font-size: 0.8rem;
@@ -873,7 +873,7 @@ header .header-content p {
   margin: 0;
 }
 .section-4 .grid-container .right-part .container .date p {
-  font-family: roboto, arial;
+  font-family: roboto, serif;
   color: rgb(230, 230, 230);
   margin: 0;
 }
@@ -931,7 +931,7 @@ header .header-content p {
   margin: 0 auto;
   background-color: rgb(238, 238, 238);
   padding: 60px;
-  font-family: roboto, arial;
+  font-family: roboto, serif;
 }
 .section-5 .text p {
   position: relative;
@@ -952,7 +952,7 @@ header .header-content p {
           transform: translateX(7px);
 }
 .section-5 .text h4 {
-  font-family: roboto, arial;
+  font-family: roboto, serif;
   text-transform: capitalize;
   letter-spacing: 1px;
   font-size: 1.1rem;
@@ -962,7 +962,7 @@ header .header-content p {
 .section-5 .text h4,
 .section-5 .text h5 {
   text-transform: capitalize;
-  font-family: roboto, arial;
+  font-family: roboto, serif;
 }
 .section-5 .text h5 {
   font-size: 0.8rem;
