@@ -1,93 +1,135 @@
 footer {
-  background: url(../img/bg-footer.jpg) center/cover;
-  text-align: left;
-  padding: 65px 32px;
-  color: $white;
+    position: relative;
+    background: url(../img/bg-footer.webp)center/cover;
 
-  @media screen and (max-width: 680px) {
-    background: none;
-  }
-
-  .footer-content {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 50% 50%;
-
-    @media screen and (max-width: 680px) {
-      grid-template-columns: 1fr;
+    @media screen and (max-width: 890px) {
+        background: $black-background;
+        height: 400px;
     }
 
-    .left-part {
-      padding-right: 30px;
-      line-height: 30px;
-
-      @media screen and (max-width: 680px) {
-        display: none;
-      }
-
-      h2 {
-        font-family: $font1;
-        font-size: 2.5rem;
-        font-weight: 100;
-        color: $color1;
-        margin-bottom: 15px;
-      }
-      p {
-        font-size: 0.9rem;
-        color: $grey;
-      }
+    @media screen and (max-width: 630px) {
+        height: 250px;
     }
-    .right-part {
-      padding-left: 50px;
-      display: grid;
-      grid-template-rows: 1fr 1fr;
 
-      @media screen and (max-width: 680px) {
-        padding-left: 20px;
-      }
+    .grid-container {
 
-      h3 {
-        font-size: 0.85rem;
-      }
-      input {
-        margin-top: 15px;
-        background: none;
-        border: 1px solid rgba(166, 114, 69, 0.151);
-        padding: 7px 13px;
-        width: 250px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        padding: 40px;
+        width: 70%;
+        margin: 0 auto;
 
-        @media screen and (max-width: 680px) {
-          width: 150px;
-        }
-      }
-      .follow-us {
-        display: flex;
-        margin-top: 50px;
-
-        h3 {
-          @media screen and (max-width: 680px) {
-            display: none;
-          }
+        @media screen and (max-width: 890px) {
+            display: block;
+            padding: 40px 0;
         }
 
-        ul {
-          @include alignChildren(space-around);
-          flex-wrap: wrap;
-          color: #595956;
-          font-size: 0.8rem;
-          width: 200px;
-          cursor: pointer;
+        @media screen and (max-width: 630px) {
+            display: block;
+            padding: 40px 0;
+        }
 
-          i {
-            transition: 0.2s;
+        .left-part {
+            text-align: left;
+            padding-right: 30px;
 
-            &:hover {
-              transform: scale(1.5);
+            @media screen and (max-width: 630px) {
+                display: none;
             }
-          }
+
+            h3 {
+                font-family: $font2;
+                font-weight: 100;
+                color: $brown-light;
+                text-transform: capitalize;
+                height: 35px;
+                font-size: 2.5rem;
+
+            }
+
+            p {
+                color: $white-text;
+                font-size: 0.8rem;
+                line-height: 25px;
+                margin-top: 30px;
+
+                @media screen and (max-width: 890px) {
+                    margin-bottom: 30px;
+                }
+            }
         }
-      }
+
+        .right-part {
+
+            text-align: left;
+            padding-left: 50px;
+
+            @media screen and (max-width: 630px) {
+                padding: 0;
+            }
+
+            h5 {
+                color: $white-background;
+                text-transform: uppercase;
+                font-family: $font3;
+                margin: 10px 0;
+            }
+
+            input {
+                background-color: $black-background;
+                height: 30px;
+                width: 220px;
+                padding: 10px;
+                border: 1px solid rgba(128, 128, 128, 0.226);
+                margin-bottom: 40px;
+            }
+
+            .network {
+                display: flex;
+                justify-content: space-between;
+
+            }
+
+            h5 {
+
+                width: 40%;
+
+                @media screen and (max-width: 820px) {}
+            }
+
+            ul {
+                display: flex;
+                justify-content: space-between;
+                width: 60%;
+                align-items: center;
+            }
+
+            li {
+                font-size: 0.8rem;
+                color: rgba(128, 128, 128, 0.575);
+
+                i {
+                    margin: 3px;
+                    // pour éviter que les icones se décalent lors d'un hover on met une width sur les icones.
+                    width: 15px;
+                }
+
+                i:hover {
+                    cursor: pointer;
+                    font-size: 1rem;
+                    color: rgba(168, 168, 168, 0.575);
+                }
+            }
+        }
     }
-  }
+
+    &::after {
+        content: "by Thallions";
+        font-family: $font2;
+        font-size: 1.3rem;
+        color: $brown-light;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
 }
