@@ -1,0 +1,424 @@
+/* **********   On détermine les fonts    ************* */
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(./assets/font/Montserrat-VariableFont_wght.ttf);
+}
+
+/* ******** On établit tous les paramètres globaux  ********** */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    list-style: none;
+}
+button {
+    background: none;
+    outline: none;
+    border: 1px solid whitesmoke;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+button:hover {
+    color: black;
+    background: whitesmoke;
+}
+#accueil {
+    position: fixed;
+    top: 90px;
+    left: 10px;
+    z-index: 1;
+    padding-top: 4px;
+    font-size: 0.8rem;
+    background-color: rgb(45, 43, 43);
+    text-align: center;
+    color: white;
+    border: #acceda solid 1px;
+    border-radius: 30px;
+    margin: 0 auto;
+    width: 120px;
+    height: 25px;
+}
+#accueil:hover {
+    cursor: pointer;
+    scale: 1.05;
+    background: #3c34498c;
+    transition: 0.2s;
+}
+a {
+    text-decoration: none;
+}
+body {
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* ****** On commence à configurer par le haut de la page, puis on descend*** */
+
+nav {
+    /* Eviter que la barre de nav s'étende trop */
+    max-width: 1100px;
+    margin: 0 auto;
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+nav li {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-style: 0.9rem;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s ease;
+    padding: 20px 0;
+}
+
+/* ******* création de l'annimation au dessus des 'li' de la <nav> */
+
+/* couleur des 'li' quand on survole */
+nav li:hover {
+    color: rgb(95, 4, 170);
+}
+/* création d'un 'before' au dessus des 'li' au survol */
+nav li:hover:before {
+    content: "";
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    background: rgb(95, 4, 170);
+    transform: translateY(-20px);
+}
+/* suppression du before sur le 'FR|EN' */
+ul li:last-child::before {
+    background: none;
+}
+#language {
+    background: rgba(128, 128, 128, 0.25);
+    border-radius: 100px;
+    padding: 8px 16px;
+}
+
+/* *****************    main-header     ****************** */
+.main-header {
+    background: url(./assets/img/bg.jpg) center/cover fixed;
+    color: white;
+    padding: 60px;
+}
+h1 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 30px 0 35px;
+}
+.main-header button {
+    padding: 15px 30px;
+    letter-spacing: 2px;
+}
+/*  Décallage du chevron vers la droite */
+.main-header i {
+    transform: translateX(5px);
+}
+.header-text {
+    padding: 45px 0;
+    max-width: 1100px;
+    font-size: 1.2rem;
+    line-height: 34px;
+    margin: 0 auto;
+}
+/* *****************    parties des 3 logos     ****************** */
+.icon-part {
+    background: rgb(15, 15, 15);
+    padding: 65px 0;
+    color: whitesmoke;
+}
+.icon-part-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.lip-logo {
+    margin-bottom: 30px;
+}
+.icon-part h3 {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.icon-part p {
+    width: 80%;
+    margin: 10px auto 20px;
+}
+.icon-part button {
+    padding: 9px 32px;
+}
+
+/* ******************   LES NEWS DU CAMPUS      ************ */
+
+.news-part {
+    background-color: rgba(245, 245, 245, 0.8);
+    padding: 80px 0 45px;
+}
+.header-news {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.left-part {
+    line-height: 30px;
+}
+.left-part h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-align: left;
+}
+.left-part p {
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: left;
+}
+.right-part button {
+    color: black;
+    border-color: black;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+}
+.right-part button:hover {
+    color: whitesmoke;
+    background-color: black;
+}
+.right-part button:hover i {
+    transform: translateX(10px);
+}
+.main-news-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1100px;
+    margin: 45px auto;
+}
+
+/* Si on tape: '.main-news-container div{}' on sélectionne toutes les div de cette classe: enfants + petits enfants. Si on veut sélectionner que les enfants directs de la classe on ajoute le signe '>' */
+.main-news-container > div {
+    /* On met une position relative pour pouvoir placer les boutons ('lire la suite' et 'sur inscription') en bas des div. Eux même seront configurés en position absolute*/
+    /*     Pour placer un élément avec le bas de la boite pour référence, le parent doit être en "position: relative;" et l'enfant en "position: absolute"; puis "bottom:0" (0 signifie qu'il sera tout en bas de la boite*/
+    position: relative;
+    max-width: 23%;
+}
+.mn-pic img {
+    /* impose une couverture totale sur 100% de la largeur du parent  */
+    object-fit: cover;
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 0 2px 10px #888;
+}
+.main-news-container h4 {
+    margin: 15px 0;
+    text-align: left;
+}
+.main-news-container p {
+    text-align: left;
+    font-size: 0.8rem;
+    line-height: 20px;
+    margin-bottom: 45px;
+}
+.main-news-container .link {
+    position: absolute;
+    text-align: left;
+    bottom: 0;
+}
+.main-news a {
+    text-transform: uppercase;
+    color: rgb(95, 4, 170);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.main-news a:hover {
+    color: rgb(180, 180, 180);
+}
+.main-news i {
+    transform: translateX(5px);
+}
+
+.main-news a:hover i {
+    transform: translateX(8px);
+}
+
+/* ******************   INFOS ET CONTACTS      ************ */
+
+.contact {
+    padding: 65px 0 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.contact-list {
+    display: flex;
+    justify-content: space-around;
+    font-weight: 500;
+    /* on place '.contact-list' en relatif car on va placer la barre séparatrice en position absolute, en bas de cette classe  */
+    position: relative;
+}
+.contact-list::after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 1px;
+    background-color: #e6e5e5;
+    bottom: -30px;
+}
+.contact-list .list {
+    width: 24%;
+    text-align: left;
+}
+#contact-img img {
+    display: block;
+    margin: 0 auto;
+}
+.contact-list h5 {
+    text-transform: uppercase;
+    font-style: 1rem;
+    margin-bottom: 15px;
+}
+.infos-p li {
+    margin: 15px;
+}
+.list p {
+    line-height: 22px;
+    margin-bottom: 15px;
+}
+.list h6 {
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+}
+.list .network {
+    margin: 20px 0 8px;
+}
+.list .footer-logos i {
+    font-size: 0.8rem;
+    margin: 0 12px 30px 0;
+}
+.list .copyright {
+    margin: 0;
+}
+.contact-medias {
+    padding: 60px 0 15px;
+    display: flex;
+    align-items: center;
+    width: 95%;
+    margin: 0 auto;
+}
+.medias-text {
+    text-align-last: left;
+    width: 30%;
+}
+.medias-text h3 {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+.medias-text p {
+    font-size: 0.8rem;
+}
+.medias-logos {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+}
+.medias-logos img {
+    width: 70%;
+}
+
+/* ******************   FOOTER      ************ */
+
+footer {
+    background-color: rgb(26, 26, 26);
+    color: whitesmoke;
+    padding: 25px;
+}
+footer h3 {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+footer ul {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* ******************   MEDIA QUERIES      ************ */
+
+@media screen and (max-width: 1000px) {
+    nav li {
+        font-size: 0.7rem;
+    }
+    .main-header img {
+        width: 60%;
+    }
+    .contact-list .list {
+        padding: 15px;
+    }
+    .medias-logos img {
+        width: 40px;
+    }
+    footer ul {
+        /* mettre les logos à la ligne quand on diminue l'écran */
+        flex-wrap: wrap;
+    }
+    footer li {
+        margin: 5px;
+    }
+}
+@media screen and (max-width: 740px) {
+    nav {
+        display: none;
+    }
+    .icon-part-container {
+        display: block;
+    }
+    .list-icon-part {
+        margin-top: 40px;
+    }
+    .icon-part {
+        padding: 0 0 30px;
+    }
+    .header-news {
+        display: block;
+    }
+    .left-part {
+        width: 100%;
+    }
+    .left-part h2 {
+        text-align: center;
+    }
+    .left-part p {
+        padding: 20px 0 20px;
+        text-align: center;
+    }
+    .main-news-container {
+        display: block;
+    }
+    .main-news-container div {
+        max-width: 90%;
+        margin: 0 auto;
+        padding-bottom: 15px;
+        margin-top: 58px;
+    }
+    .main-news-container img {
+        width: 50%;
+    }
+    .contact {
+        display: none;
+    }
+}

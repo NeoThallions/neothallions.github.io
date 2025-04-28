@@ -1,0 +1,116 @@
+.section-2 {
+    position: relative;
+    z-index: 100;
+    height: 800px;
+
+    @media screen and (max-width: 920px) {
+        height: 1140px;
+    }
+
+    .discover-container {
+        @include litle-head;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        width: 55%;
+        margin: 0 auto;
+        font-family: $font3;
+        color: $white-text;
+
+        @media screen and (max-width: 920px) {
+            width: 65%;
+        }
+
+        @media screen and (max-width: 570px) {
+            width: 100%;
+            font-size: 0.8rem;
+        }
+
+        li {
+            border-bottom: 1px solid $grey-text;
+            height: 25px;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+        }
+
+    }
+
+    .menu {
+        @include position-absolute-center;
+        position: absolute;
+        bottom: 80px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 20px;
+
+        z-index: 2;
+        background: $white-background;
+        width: 60%;
+        margin: 10px 0;
+        padding: 20px;
+
+        @media screen and (max-width: 920px) {
+            display: block;
+            border-top: 5px solid $brown-light;
+        }
+
+        @media screen and (max-width: 570px) {
+            width: 100%;
+        }
+
+        .dish {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 95%;
+            height: 100px;
+            border-bottom: 1px dashed $line;
+
+        }
+
+        .price {
+            color: $brown-light;
+            font-family: $font3;
+            font-weight: 600;
+            padding-left: 10px;
+        }
+
+        img {
+            border-radius: 100px;
+            height: 80px;
+            margin: 20px;
+        }
+
+        .text {
+            text-align: left;
+            width: 100%;
+
+            .title-dish {
+                text-transform: uppercase;
+                font-family: $font3;
+                font-size: 0.8rem;
+            }
+
+            .ingredients {
+                text-transform: capitalize;
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    .img-back {
+        position: absolute;
+        z-index: 0;
+        bottom: 0;
+        height: 500px;
+        width: 100%;
+        background: url(../img/bg-menu-01.webp)center/cover;
+
+
+    }
+}

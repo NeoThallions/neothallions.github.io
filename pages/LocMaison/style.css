@@ -1,0 +1,421 @@
+/* ***********   création de variables pour les couleurs  *********/
+:root {
+    --color1: #f4f1df;
+    --color2: #f7ecd5;
+    --section1: #fff8df;
+    --section2: #eff1f5;
+    --label1: #01df74;
+    --label2: #00ffff;
+    --footer: #524838;
+}
+/* ************     détermination des fonts     **************** */
+
+@font-face {
+    font-family: "AdventPro";
+    src: url(./assets/fonts/AdventPro-Regular.ttf);
+}
+@font-face {
+    font-family: "AdventProMedium";
+    src: url(./assets/fonts/AdventPro_SemiExpanded-Medium.ttf);
+}
+@font-face {
+    font-family: "DancingScript";
+    src: url(./assets/fonts/DancingScript-Regular.ttf);
+}
+
+/* ************     paramètres généraux     **************** */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    text-align: center;
+    font-family: "Adventpro";
+    min-height: 100vh;
+    background-color: var(--section1);
+}
+#accueil {
+    position: fixed;
+    top: 90px;
+    left: 10px;
+    z-index: 1;
+    padding-top: 8px;
+    font-size: 0.8rem;
+    background-color: rgb(45, 43, 43);
+    text-align: center;
+    color: white;
+    border: #acceda solid 1px;
+    border-radius: 30px;
+    margin: 0 auto;
+    width: 120px;
+    height: 25px;
+}
+#accueil:hover {
+    cursor: pointer;
+    scale: 1.05;
+    background: #433e4dce;
+    transition: 0.2s;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+a:focus {
+    color: black;
+}
+
+/* ************     NAV     **************** */
+
+nav {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: var(--color1);
+    position: fixed;
+    /* passer le <nav> en 1er plan car le '.head-container', du fait de sa 'position relative', fera passer le <nav> en second plan qui aura pour conséquence d'inhiber les ':hover' sur les boutons de la <nav> */
+    z-index: 1;
+}
+nav div {
+    display: flex;
+    margin-left: 30px;
+}
+button {
+    height: 20px;
+    width: 100px;
+    font-family: "dancingscript";
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    background: var(--color1);
+}
+button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+ul {
+    display: flex;
+    text-transform: capitalize;
+    justify-content: flex-end;
+    align-items: center;
+    color: black;
+    font-size: 1.1rem;
+}
+li {
+    padding: 20px 20px;
+}
+li:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* *********************    HEADER     ************************* */
+
+header {
+    height: 800px;
+    background: url(./assets/img/image-principale.JPG) center/cover fixed;
+}
+.header-container {
+    position: relative;
+    padding-top: 180px;
+}
+header h1 {
+    padding-bottom: 50px;
+    font-family: "DancingScript";
+    text-transform: capitalize;
+    font-size: 5.5rem;
+    color: var(--color2);
+    text-shadow: 1px 3px 5px black;
+}
+header h2:after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 340px;
+    background-color: rgba(245, 222, 179, 0.651);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 90px;
+    box-shadow: 1px 3px 5px wheat;
+}
+header h2 {
+    padding-top: 50px;
+    font-family: "AdventProMedium";
+    font-size: 2.3rem;
+    font-weight: 500;
+    color: var(--color2);
+    text-shadow: 1px 3px 5px black;
+}
+
+/* *********************        section-1      *********************** */
+
+.section-1 {
+    background-color: var(--section1);
+    height: 650px;
+}
+.section-1 h2 {
+    padding: 60px 0 30px;
+    font-size: 2.3rem;
+}
+.section-1 p {
+    width: 60%;
+    margin: 0 auto;
+    text-align: justify;
+    font-weight: 500;
+}
+.container-flex {
+    display: flex;
+    margin: 40px;
+    justify-content: space-around;
+}
+.mn-pic {
+    padding: 20px;
+}
+.mn-pic h3 {
+    padding: 20px;
+    font-family: "DancingScript";
+    font-size: 1.4rem;
+}
+.mn-pic img {
+    border-radius: 10px;
+    box-shadow: 6px 4px 11px 0px rgba(0, 0, 0, 0.425);
+}
+.mn-pic img:hover {
+    transform: scale(1.04);
+    transition: 0.2s;
+}
+
+/* *********************        section-2      *********************** */
+
+.section-2 {
+    background-color: var(--section2);
+    min-height: auto;
+}
+.section-2 h2 {
+    padding: 60px 0 30px;
+    font-size: 2.3rem;
+    text-transform: uppercase;
+}
+.section-2 h3 {
+    padding: 10px;
+}
+.section-2 img {
+    box-shadow: 6px 4px 11px 3px rgba(0, 0, 0, 0.425);
+}
+.section-2 .grid-container {
+    display: grid;
+    width: 80%;
+    margin: 0 auto;
+}
+.ocean {
+    display: flex;
+    padding: 20px;
+}
+.ocean img {
+    width: 45%;
+}
+.ocean h3,
+.phare h3 {
+    background-color: #01df74;
+    transform: translate(-5vh, 3vh);
+    box-shadow: 3px 4px 0px 1px rgba(44, 170, 55, 0.89);
+}
+.chateau h3,
+.vignes h3 {
+    background-color: #19e1fc;
+    transform: translate(5vh, 3vh);
+    box-shadow: -3px 4px 0px 1px rgba(41, 141, 172, 0.897);
+}
+.chateau {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+.chateau img {
+    width: 45%;
+}
+
+.phare {
+    display: flex;
+    padding: 20px;
+}
+.phare img {
+    width: 45%;
+}
+.vignes {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+.vignes img {
+    width: 45%;
+}
+
+/* *********************       FOOTER     *********************** */
+
+footer {
+    position: relative;
+    background-color: var(--footer);
+    min-height: auto;
+}
+footer h2 {
+    padding: 60px 0 30px;
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    color: var(--color1);
+}
+form {
+    display: grid;
+    width: 40%;
+    margin: 10px auto;
+    gap: 3px;
+}
+form input {
+    font-family: "AdventProMedium";
+    height: 30px;
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+}
+textarea {
+    font-family: "AdventProMedium";
+    height: 100px;
+    resize: none;
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+}
+#send {
+    font-family: "AdventProMedium";
+    font-size: 1.3rem;
+    background-color: var(--color1);
+    color: var(--footer);
+    width: 95%;
+    height: 45px;
+    margin: 5px auto;
+    border-radius: 8px;
+    border: none;
+}
+#send:hover {
+    cursor: pointer;
+    background-color: var(--footer);
+    color: var(--color1);
+    border: 1px solid var(--color1);
+    transition: 0.2s;
+}
+.copy-rzo {
+    display: grid;
+    width: 80%;
+    margin: 100px auto 0;
+    grid-template-columns: 50% 50%;
+}
+
+footer:after {
+    content: "";
+    position: absolute;
+    width: 75%;
+    height: 1px;
+    background-color: var(--color1);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 100px;
+}
+
+.copyright {
+    display: flex;
+    align-items: center;
+    color: var(--color1);
+}
+.copyright h4 {
+    transform: translateX(5px);
+}
+.rzo i {
+    color: var(--color1);
+}
+.rzo i:hover {
+    transform: scale(1.1);
+}
+
+/* *******************  RESPONSIVE / MEDIA QUERIES ********************* */
+
+@media screen and (max-width: 840px) {
+    body {
+        overflow: scroll;
+    }
+    .container-flex {
+        display: grid;
+    }
+    .section-1 {
+        height: auto;
+    }
+}
+@media screen and (max-width: 780px) {
+    .ocean,
+    .chateau,
+    .phare,
+    .vignes {
+        display: block;
+    }
+    .ocean h3,
+    .phare h3 {
+        background-color: #01df74;
+        transform: translate(60%, -15px);
+        box-shadow: 3px 4px 0px 1px rgba(44, 170, 55, 0.89);
+    }
+    .chateau h3,
+    .vignes h3 {
+        background-color: #19e1fc;
+        transform: translate(150%, 10px);
+        box-shadow: 3px 4px 0px 1px rgba(41, 141, 172, 0.897);
+    }
+    .section-2 img {
+        width: 80%;
+    }
+    .section-2 h3 {
+        font-size: 0.7rem;
+        width: 100px;
+    }
+}
+@media screen and (max-width: 560px) {
+    nav div {
+        height: auto;
+        margin: 0 auto;
+    }
+    nav li {
+        padding: 5px;
+    }
+    nav ul {
+        font-size: 0.9rem;
+    }
+    .section-2 h2 {
+        font-size: 2rem;
+    }
+    .section-2 img {
+        width: 100%;
+    }
+    .section-2 h3 {
+        font-size: 0.7rem;
+        width: 100px;
+    }
+    .ocean h3,
+    .phare h3 {
+        background-color: #01df74;
+        transform: translate(20%, -15px);
+        box-shadow: 3px 4px 0px 1px rgba(44, 170, 55, 0.89);
+    }
+    .chateau h3,
+    .vignes h3 {
+        background-color: #19e1fc;
+        transform: translate(90%, 10px);
+        box-shadow: 3px 4px 0px 1px rgba(41, 141, 172, 0.897);
+    }
+    form {
+        width: 70%;
+    }
+}

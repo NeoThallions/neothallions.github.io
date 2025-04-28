@@ -1,0 +1,154 @@
+// *********    déclaration des fonts   **********
+@font-face {
+    font-family: "allura";
+    src: url(../fonts/Allura-Regular.ttf);
+}
+
+@font-face {
+    font-family: "poppins";
+    src: url(../fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url(../fonts/Roboto-Light.ttf);
+}
+
+// *********    déclaration des variables   **********
+
+$font1: poppins, arial;
+$font2: allura, arial;
+$font3: roboto, arial;
+
+$white-text: rgb(230, 230, 230);
+$white-background: rgb(238, 238, 238);
+$brown-text: rgb(173, 135, 101);
+$brown-light: rgb(197, 149, 108);
+$black-background: rgb(33, 33, 30);
+$black: rgb(0, 0, 0);
+$grey-text: rgb(183, 183, 185);
+$grey-network: rgb(88, 89, 86);
+$line: rgba(43, 30, 23, 0.233);
+
+
+
+// *********    déclaration des mixins  **********
+
+@mixin litle-head {
+    padding: 30px;
+
+    h2 {
+        height: 35px;
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        text-transform: uppercase;
+
+    }
+
+    img {
+        height: 30px;
+        margin: 25px;
+    }
+}
+
+@mixin position-absolute-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin cooker {
+    border-radius: 100px;
+    height: 80px;
+    margin: 0;
+}
+
+@mixin text-event {
+
+    background-color: $white-background;
+    padding: 20px;
+
+    h4 {
+        font-family: $font3;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+        font-size: 1.1rem;
+        font-weight: 100;
+    }
+
+    p {
+        font-family: $font3;
+        text-transform: capitalize;
+        color: rgba(128, 128, 128, 0.562);
+        font-size: 0.8rem;
+        margin: 20px 0;
+    }
+
+    button {
+        border: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.7rem;
+    }
+
+    button:hover {
+        cursor: pointer;
+        color: $brown-text;
+    }
+}
+
+// *********    paramètres généraux     *********
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    outline: none;
+}
+
+body {
+    background-color: $black-background;
+    text-align: center;
+    margin: 0 auto;
+    font-family: $font1;
+    max-width: 1515px;
+    min-height: 100vh;
+    min-width: 340px;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+li,
+a {
+    color: $white-text;
+
+}
+
+h2 {
+    font-family: $font2;
+    color: $brown-text;
+    font-weight: 100;
+    font-size: 1.9rem;
+}
+
+p {
+    font-family: $font3;
+}
+
+button {
+    user-select: none;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:visited {
+    color: unset;
+}

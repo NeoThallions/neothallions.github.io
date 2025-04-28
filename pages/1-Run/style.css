@@ -1,0 +1,304 @@
+@font-face {
+    font-family: "WorkSans";
+    src: url(./Assets/Fonts/WorkSans-VariableFont_wght.ttf);
+}
+
+/* ******************   STYLE GENERAL   ******************** */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "WorkSans";
+    font-weight: 350;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+}
+body {
+    min-height: 110px;
+}
+#accueil {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    padding-top: 5px;
+    background-color: rgb(65, 60, 60);
+    text-align: center;
+    color: white;
+    border: #acceda solid 1px;
+    border-radius: 30px;
+    margin: 0 auto;
+    width: 150px;
+    height: 30px;
+}
+#accueil:hover {
+    cursor: pointer;
+    scale: 1.05;
+    background-color: #504747;
+    transition: 0.2s;
+}
+h1 {
+    font-size: 3rem;
+    font-weight: 300;
+}
+h2 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+li {
+    list-style: none;
+}
+p {
+    line-height: 30px;
+    padding: 30px 0;
+}
+button {
+    text-transform: uppercase;
+    background-color: white;
+    border: solid 1px #c2c2c275;
+    padding: 0 50px;
+    height: 47px;
+    font-size: 0.8rem;
+    font-weight: 400;
+    border-radius: 30px;
+    letter-spacing: 1px;
+}
+button:hover {
+    color: #acceda;
+    cursor: pointer;
+    border: solid 1px #acceda;
+}
+
+/* ******************   HEADER   ******************** */
+
+header {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.left-part {
+    display: flex;
+    align-items: center;
+}
+.header-text {
+    margin: 0 40px;
+    padding: 50px 0;
+}
+.right-part img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+/* ******************   WOOD   ******************** */
+
+.wood {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    position: relative;
+}
+.left-part-wood img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.right-part-wood {
+    display: flex;
+    align-items: center;
+}
+.right-part-wood::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #acceda4b;
+    top: 0;
+}
+.right-part-wood::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #acceda4b;
+    bottom: 0;
+}
+.text-wood {
+    margin: 0 40px;
+    padding: 50px 0;
+}
+
+/* ******************   BRIDGE   ******************** */
+
+.bridge {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    position: relative;
+}
+.left-part-bridge {
+    display: flex;
+    align-items: center;
+}
+.left-part-bridge ::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #bfc7ca17;
+    bottom: 0;
+    transform: translateX(-30%);
+}
+.text-bridge {
+    margin: 0 40px;
+    padding: 50px 0;
+}
+.right-part-bridge img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+/* ******************   FORMULAIRE   ******************** */
+.form-part {
+    position: relative;
+    margin: 30px 0;
+    height: 500px;
+}
+.form-container h2 {
+    text-align: center;
+    padding: 25px;
+}
+.form-container {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+}
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 4fr;
+    grid-template-areas:
+        "l-na l-ma"
+        "na ma"
+        "l-me l-me"
+        "me me";
+    width: 100%;
+}
+#l-na {
+    grid-area: l-na;
+    text-align: center;
+}
+#l-ma {
+    grid-area: l-ma;
+    text-align: center;
+}
+#name {
+    grid-area: na;
+}
+#mail {
+    grid-area: ma;
+}
+#l-me {
+    grid-area: l-me;
+    text-align: center;
+}
+input,
+textarea {
+    border-radius: 3px;
+    border: solid 1px #b0bcc059;
+    margin: 20px 3px;
+}
+input {
+    height: 30px;
+}
+textarea {
+    grid-area: me;
+    resize: none;
+    height: 150px;
+}
+label {
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+.form-container::after {
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 1px;
+    background-color: #acceda6e;
+    bottom: 0;
+    transform: translateX(-11%);
+}
+
+.form-container button {
+    display: block;
+    margin: 30px auto;
+}
+
+/* ******************   FOOTER   ******************** */
+
+footer {
+    height: 200px;
+}
+footer ul {
+    display: flex;
+    max-width: 50%;
+    justify-content: space-between;
+    margin: 50px auto;
+    font-size: 1rem;
+}
+ul li {
+    height: 45px;
+    width: 45px;
+    border: solid 1px #acceda;
+    border-radius: 40px;
+}
+ul a {
+    display: flex;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+}
+ul a:hover {
+    color: #acceda;
+}
+
+/* ******************   RESPONSIVE / MEDIA QUERIES    ***************** */
+
+@media screen and (max-width: 550px) {
+    .form-part {
+        height: 500px;
+    }
+    footer ul {
+        /* margin: 0 auto; */
+        width: 250px;
+    }
+    footer li {
+        width: 50px;
+        height: 50px;
+    }
+}
+@media screen and (max-width: 500px) {
+    body {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+    }
+    header {
+        display: block;
+    }
+    .wood {
+        display: block;
+    }
+    .left-part-wood {
+        display: none;
+    }
+    .bridge {
+        display: block;
+    }
+    .right-part-bridge {
+        display: none;
+    }
+}

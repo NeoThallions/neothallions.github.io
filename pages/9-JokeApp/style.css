@@ -1,0 +1,69 @@
+*{
+    list-style: none;
+  text-decoration: none;
+  outline: none;}
+body {
+    background-color: rgb(37, 44, 42);
+    min-height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-size: 1.6rem;
+    color: rgb(241, 241, 241);
+}
+#accueil {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    padding-top: 8px;
+    font-size: 0.9rem;
+    background-color: rgb(14, 48, 53);
+    font-family: Montserrat;
+    font-size: 0.8rem;
+    text-align: center;
+    color: white;
+    border: #acceda solid 1px;
+    border-radius: 30px;
+    margin: 0 auto;
+    width: 130px;
+    height: 25px;
+  }
+  #accueil:hover {
+    cursor: pointer;
+    scale: 1.05;
+    background: #3c34498c;
+    transition: 0.2s;
+  }
+.app {
+    width: 70%;
+    min-width: 400px;
+    max-width: 800px;
+    background: rgb(52, 32, 117);
+    border-radius: 14px;
+    padding: 20px 40px;
+    box-shadow: 0 2px 18px rgba(0, 0, 0, 0.307);
+    cursor: pointer;
+    transition: 0.2s;
+    margin: 100px auto;
+}
+.app:hover {
+    transform: scale(1.01);
+}
+.nextJoke {
+    height: 50px;
+    width: 200px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 15px;
+    border: 1px solid rgb(109, 109, 169);
+}
+.nextJoke:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    background-color: rgb(73, 73, 151);
+}

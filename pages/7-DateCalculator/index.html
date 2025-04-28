@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Date Calculator</title>
+
+        <link rel="stylesheet" href="./assets/styles/style.css" />
+
+        <script defer src="./index.js"></script>
+    </head>
+    <body>  
+        <a href="../../index.html" id="accueil">Retour à l'accueil</a>
+        <div class="card">
+            <h1>BOOK YOUR HOLIDAY</h1>
+            <div class="priceArea">
+                <span id="priceByNight" type="number">46</span>
+                <span> € / night</span>
+            </div>
+            <form action="">
+                <label for="start">Start</label>
+                <input type="date" id="start_date" />
+                <label for="end">End</label>
+                <input type="date" id="end_date" />
+                <div class="PriceAreaTotal">
+                    <span class="total" id="totalLabel">Total :</span>
+                    <span class="total" id="totalPrice"></span>
+                    <span class="total" id="euro">€</span>
+                </div>
+                <input type="submit" value="Validate" id="validate" />
+            </form>
+        </div>
+    </body>
+</html>
