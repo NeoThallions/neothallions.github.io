@@ -23,7 +23,7 @@ body {
   font-size: 6rem;
   background-color: rgb(45, 43, 43);
   font-family: Merriweather, serif;
-  font-size: 1rem;
+  font-size: 0.8rem;
   text-align: center;
   color: white;
   border: #acceda solid 1px;
@@ -39,7 +39,7 @@ body {
   transition: 0.2s;
 }
 form {
-  margin-top: 30px;
+  margin: 30px;
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
@@ -66,7 +66,7 @@ input:focus {
 #result {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 110px;
+  padding-top: 150px;
 }
 #result > li {
   flex: 1 0 25%;

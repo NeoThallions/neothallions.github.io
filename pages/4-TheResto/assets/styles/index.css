@@ -104,6 +104,10 @@ footer {
   footer {
     height: 250px;
   }
+  #accueil {
+    width: 70px;
+  height: 55px;
+  }
 }
 footer .grid-container {
   display: grid;
