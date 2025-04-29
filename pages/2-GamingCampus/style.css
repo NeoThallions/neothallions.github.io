@@ -421,4 +421,7 @@ footer ul {
     .contact {
         display: none;
     }
+    #accueil {
+        top: 20px;
+    }
 }
