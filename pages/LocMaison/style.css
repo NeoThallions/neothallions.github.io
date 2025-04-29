@@ -37,8 +37,8 @@ body {
 }
 #accueil {
     position: fixed;
-    top: 90px;
-    left: 10px;
+    top: 70px;
+    left: 20px;
     z-index: 1;
     padding-top: 8px;
     font-size: 0.8rem;
@@ -417,5 +417,8 @@ footer:after {
     }
     form {
         width: 70%;
+    }
+    #accueil {
+        top: 35px;
     }
 }
