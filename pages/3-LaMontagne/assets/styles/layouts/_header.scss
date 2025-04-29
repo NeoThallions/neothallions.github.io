@@ -1,43 +1,132 @@
-// ####################    HEADER    #################
-
 header {
-    min-height: 74vh;
-    padding-top: 250px;
+    color: $white1;
+    //   position: relative; car la nav sera placée en absolute
+    position: relative;
+    min-height: 100vh;
 
-    h1 {
-        color: $white;
-        font-size: 4rem;
-        width: 70%;
-        margin: 0 auto 40px;
-        letter-spacing: 10px;
-
-        @media screen and (max-width: 940px) {
-            width: 100%;
-            font-size: 5vw;
-        }
-
-        @media screen and (max-width: 620px) {
-            font-size: 1.8rem;
-        }
-    }
-
-    p {
-        color: $white;
-        font-size: 0.8rem;
-        width: 90%;
-        margin: 0 auto 70px;
-        font-style: italic;
-    }
-
-    i {
-        color: $white;
-        font-size: 1.5rem;
-        border: 2px solid $white;
-        width: 70px;
-        height: 70px;
-        border-radius: 100px;
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        padding: 22px;
-        margin-bottom: 150px;
+        min-height: 100vh;
+        opacity: 0;
+        // pour l'animation, le header-content doit monter de 40px vers sa position centrée d'origine, donc on le décale vers le bas de 40px, puis l'anim le remontera jusqu'à sa position d'origine càd '0'
+        transform: translateY(40px);
+        // appel de l'anim qui durera 1.5s et restera à son dernier état (forwards)
+        animation: headerAnim 1.5s forwards;
+
+        @keyframes headerAnim {
+            to {
+                transform: translateY(0);
+                // l'opacité du 'header-content' paramétré précédemment sur 0 (ligne 13) passera à 1.
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            // appel de la mixin
+            @include title;
+            font-size: 4rem;
+            letter-spacing: 6px;
+
+            // responsive
+            @media screen and (max-width: 700px) {
+                font-size: 2rem;
+            }
+        }
+
+        p {
+            margin: 40px auto 60px;
+            font-style: italic;
+            width: 85%;
+        }
+
+        span {
+            border: 2px solid $white1;
+            border-radius: 50px;
+            height: 60px;
+            width: 60px;
+            // en précisant ici une font-size, l'enfant du span (la flèche) aura cette taille. 
+            font-size: 1.2rem;
+            // centrer l'enfant unique du span
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        background: rgba(255, 255, 255, 0.253);
+        color: $white1;
+        width: 85%;
+        height: 65px;
+        z-index: 100;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        ul {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-left {
+
+            // quand on survole 'nav-left' les 'li' qui ne sont pas survolés (not(:hover)) auront le style suivant... ( ici, pas de fond et couleur du texte blanc)
+            &:hover li:not(:hover) {
+                background: none;
+                color: $white1;
+            }
+
+            li {
+                @include title;
+                font-size: 0.7rem;
+                padding: 0 15px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                @media screen and (max-width: 700px) {
+                    font-size: 0.5rem;
+                }
+
+                &:first-child {
+                    background: $white1;
+                    color: $black1;
+                }
+
+                &:hover {
+                    background: $white1;
+                    color: $black1;
+                }
+            }
+        }
+
+        .nav-right {
+            font-size: 1.1rem;
+            min-width: 100px;
+            width: 25%;
+            max-width: 300px;
+            justify-content: space-around;
+            margin-right: 10px;
+
+            @media screen and (max-width: 700px) {
+                display: none;
+            }
+
+            li {
+                transition: 0.15s;
+                cursor: pointer;
+
+                &:hover {
+                    transform: scale(1.3);
+                }
+            }
+        }
     }
 }

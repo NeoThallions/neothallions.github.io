@@ -1,120 +1,111 @@
 footer {
-    position: relative;
-    margin-top: 30px;
+  background: $grey2;
+  min-height: 640px;
+  width: 85%;
+  margin: 0 auto 70px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+
+  @media screen and (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+
+  form {
+    // avec le grid, tous les éléments se répartissent l'espace les uns au dessus des autres
     display: grid;
-    grid-template-columns: 50% 50%;
-    background-color: $grey1;
 
-    .left-part {
-        border-right: solid 1px $grey3;
+    // on donne la hauteur de chaque enfants ligne par ligne
+    // ici, les labels:18px, zone de texte:45px, la textarea:200px, tout le reste c'est pour le bouton:1fr
+    grid-template-rows: 18px 45px 18px 45px 18px 200px 1fr;
 
-        form {
-            padding: 40px 0;
-            width: 80%;
-            margin: 0 auto;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-family: $font1;
-            font-size: 0.7rem;
-            text-align: left;
-            color: $grey2;
+    gap: 18px;
+    padding: 60px 50px;
 
-            div {
+    label {
+      display: flex;
+      align-items: flex-end;
+      font-size: 0.7rem;
+      color: $grey3;
 
-                input,
-                textarea {
-                    width: 100%;
-                    height: 40px;
-                    margin: 20px 0;
-                    background-color: $grey1;
-                    border: solid 1px $grey3;
-
-                }
-
-                textarea {
-                    height: 150px;
-                    resize: none;
-                }
-            }
-
-        }
-
-        #button {
-            margin-top: 20px;
-            width: 180px;
-            height: 50px;
-            border: solid 2px $grey2;
-            background-color: $white;
-            color: $grey2;
-            text-transform: uppercase;
-            font-family: $font1;
-            letter-spacing: 3px;
-        }
-
-        #button:hover {
-            background-color: $grey2;
-            border: $grey1;
-            color: $grey1;
-            transition: 0.2s;
-            cursor: pointer;
-        }
+      // appel de la mixin
+      @include title;
     }
 
-    .right-part {
-        display: grid;
-        grid-template-columns: 25% 75%;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        align-items: center;
-
-        h5 {
-            padding-left: 30px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-family: $font1;
-            font-size: 0.7rem;
-            text-align: left;
-            color: $grey2;
-        }
-
-        p {
-            font-size: 0.8rem;
-            color: rgb(172, 172, 172);
-            text-align: left;
-            line-height: 30px;
-            padding-left: 50px;
-        }
-
-        ul {
-            display: flex;
-            padding-left: 50px;
-
-            a {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-right: 10px;
-                border: solid 1px $grey3;
-                border-radius: 100px;
-                height: 30px;
-                width: 30px;
-            }
-        }
-
-        @media screen and (max-width: 620px) {
-            padding: 50px 0;
-        }
+    // on précice l'input de type "text" pour ne pas sélectionner le bouton qui est 1 input de type "submit"
+    input[type="text"],
+    textarea {
+      background: none;
+      border: 1px solid $grey1;
+      border-radius: 4px;
+      resize: none;
     }
 
-    @media screen and (max-width: 620px) {
-        display: block;
+    // pour mettre le bouton le plus en bas à gauche, il faut créer une classe rien que pour le bouton puis:
+    .submit-container {
+      display: flex;
+      align-items: flex-end;
+
+      .btn {
+        color: $grey3;
+        border: 2px solid $grey3;
+      }
+    }
+  }
+
+  .infos-contact {
+    border-left: 1px solid $grey1;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+
+    div:nth-child(1) {
+      @media screen and (max-width: 900px) {
+        border-top: 1px solid $grey1;
+        padding-bottom: 20px;
+      }
     }
 
-    &::after {
-        content: "by Thallions";
-        font-family: $font3;
-        color: $grey2;
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
+    div {
+      border-bottom: 1px solid $grey1;
+      display: grid;
+      grid-template-columns: 30% 70%;
+      align-items: center;
+
+      @media screen and (max-width: 900px) {
+        grid-template-columns: 45% 55%;
+      }
+
+      h3 {
+        @include title;
+        font-size: 0.7rem;
+        padding-left: 40px;
+        text-align: left;
+        color: $grey3;
+      }
+
+      p {
+        font-size: 0.8rem;
+        line-height: 26px;
+        text-align: left;
+        color: grey;
+      }
     }
+
+    .social {
+      ul {
+        display: flex;
+
+        li {
+          border: 1px solid $grey1;
+          border-radius: 150px;
+          height: 40px;
+          width: 40px;
+          font-size: 0.9rem;
+          margin-right: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
 }
