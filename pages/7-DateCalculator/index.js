@@ -57,15 +57,17 @@ const bookinkCalc = () => {
   ); // Ceci va nous donner le nombre de millisecondes séparant les deux dates.
   //calcul du nombre de jours avec arrondi au supérieur (Math.ceil)
   let diffDays = Math.ceil(diffTime / (3600000 * 24));
+
   console.log(diffDays);
-  console.log(priceByNight.textContent);
+  console.log(priceByNight.value);
 
   // On calcule le prix pour ce nombre de jour et on l'injecte dans le DOM, dans le span 'totalPrice'
 
-  totalPrice.textContent = diffDays * priceByNight.textContent;
+  totalPrice.textContent = diffDays * priceByNight.value;
 };
 
 // on appelle la fonction lorsque les dates sont modifiées sinon, rien ne se passe...
 start_date.addEventListener("change", bookinkCalc);
 end_date.addEventListener("change", bookinkCalc);
+priceByNight.addEventListener("change", bookinkCalc);
 bookinkCalc();

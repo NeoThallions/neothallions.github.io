@@ -29,6 +29,17 @@ body {
             margin-bottom: 30px;
             font-size: 1.2rem;
             color: rgb(34, 34, 34);
+            #priceByNight{
+                width: 60px;
+                text-align: right;
+                font-size: 1.2rem;
+                border: none;
+                background-color: rgba(186, 229, 214, 0.351);
+                &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin:0;
+                }
+            }
         }
 
         form {
@@ -45,6 +56,9 @@ body {
                 text-align: center;
                 font-size: 1.5rem;
                 cursor: pointer;
+                @media screen and (max-width: 540px) {                    
+                    width: 70%;
+                }
             }
 
             label {
@@ -56,6 +70,7 @@ body {
                 font-weight: bold;
             }
             #validate {
+                display: none;
                 width: 120px;
                 background-color: rgb(118, 59, 226);
                 opacity: 1;
@@ -67,6 +82,10 @@ body {
                 border: 2px solid rgb(118, 59, 226);
                 cursor: pointer;
             }
+        }
+        @media screen and (max-width: 540px) {
+            margin: 100px auto;
+            width: 70%;
         }
     }
 }

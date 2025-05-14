@@ -4,6 +4,29 @@ header {
     position: relative;
     min-height: 100vh;
 
+    #accueil {
+        position: fixed;
+        top: 90px;
+        left: 10px;
+        z-index: 1;
+        padding-top: 4px;
+        font-size: 0.8rem;
+        background-color: rgb(45, 43, 43);
+        text-align: center;
+        color: white;
+        border: #acceda solid 1px;
+        border-radius: 30px;
+        margin: 0 auto;
+        width: 120px;
+        height: 25px;
+    }
+    #accueil:hover {
+        cursor: pointer;
+        scale: 1.05;
+        background: #3c34498c;
+        transition: 0.2s;
+    }
+
     .header-content {
         display: flex;
         flex-direction: column;

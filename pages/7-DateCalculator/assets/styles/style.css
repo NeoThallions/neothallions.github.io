@@ -1,37 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  list-style: none;
-  text-decoration: none;
-  outline: none;
-}
-
-#accueil {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 1000;
-  padding-top: 8px;
-  font-size: 6rem;
-  background-color: rgb(34, 110, 120);
-  font-family: serif;
-  font-size: 1rem;
-  text-align: center;
-  color: white;
-  border: #acceda solid 1px;
-  border-radius: 30px;
-  margin: 0 auto;
-  width: 130px;
-  height: 35px;
-}
-#accueil:hover {
-  cursor: pointer;
-  scale: 1.05;
-  background: #3c34498c;
-  transition: 0.2s;
 }
 
 body {
@@ -47,13 +18,8 @@ body .card {
   width: 40%;
   border-radius: 30px;
   background-color: rgba(240, 255, 255, 0.726);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 body .card h1 {
   margin: 30px 0;
@@ -64,14 +30,20 @@ body .card .priceArea {
   font-size: 1.2rem;
   color: rgb(34, 34, 34);
 }
+body .card .priceArea #priceByNight {
+  width: 60px;
+  text-align: right;
+  font-size: 1.2rem;
+  border: none;
+  background-color: rgba(186, 229, 214, 0.351);
+}
+body .card .priceArea #priceByNight::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 body .card form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 body .card form input {
   outline: none;
@@ -84,6 +56,11 @@ body .card form input {
   font-size: 1.5rem;
   cursor: pointer;
 }
+@media screen and (max-width: 540px) {
+  body .card form input {
+    width: 70%;
+  }
+}
 body .card form label {
   font-size: 1.2rem;
 }
@@ -93,6 +70,7 @@ body .card form .PriceAreaTotal {
   font-weight: bold;
 }
 body .card form #validate {
+  display: none;
   width: 120px;
   background-color: rgb(118, 59, 226);
   opacity: 1;
@@ -103,4 +81,10 @@ body .card form #validate:hover {
   color: rgb(118, 59, 226);
   border: 2px solid rgb(118, 59, 226);
   cursor: pointer;
+}
+@media screen and (max-width: 540px) {
+  body .card {
+    margin: 100px auto;
+    width: 70%;
+  }
 }/*# sourceMappingURL=style.css.map */

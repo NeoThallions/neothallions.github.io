@@ -232,6 +232,7 @@ label {
 
 .form-container button {
     display: block;
+    width: 80%;
     margin: 30px auto;
 }
 
@@ -300,5 +301,37 @@ ul a:hover {
     }
     .right-part-bridge {
         display: none;
+    }
+    .text-bridge{
+        position: relative;
+    }
+  
+    .text-bridge::after {
+        content: "";
+        position: absolute;
+        transform: translateX(-50%);
+        width: 200%;
+        height: 1px;
+        background-color: #acceda9f;
+        bottom: 0;
+    }
+    .form-container form,label,input,textarea{
+        display: block;
+        width: 100%;
+    }
+    .form-container::after{
+         bottom: -40px;
+    }
+    footer ul{
+                padding-top: 15px;
+        
+    }
+    footer li{
+        display: flex;
+        width: 35px;
+        height: 35px;
+        align-items: center;
+        justify-content: center;
+        border: none;
     }
 }
