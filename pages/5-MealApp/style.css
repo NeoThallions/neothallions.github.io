@@ -39,14 +39,18 @@ body {
   transition: 0.2s;
 }
 form {
-  margin: 30px;
+  margin: 70px auto;
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  background: white;
+  background: rgb(141, 129, 129);
+  color: whitesmoke;
   padding: 6px 20px;
   border-radius:6px;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.054);
+}
+#lang{
+  color: whitesmoke;
 }
 input {
   border: 1px solid rgb(235, 244, 242);
@@ -77,6 +81,9 @@ input:focus {
   border-radius: 5px;
   padding: 10px 20px;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.084);
+}
+#search{
+  padding-bottom: 5px;
 }
 h2 {
   margin: 20px auto;
