@@ -175,7 +175,7 @@ footer .grid-container .right-part li i:hover {
   color: rgba(168, 168, 168, 0.575);
 }
 footer::after {
-  content: "by Thallions";
+  content: "by NeoThallions";
   font-family: allura, arial;
   font-size: 1.3rem;
   color: rgb(197, 149, 108);

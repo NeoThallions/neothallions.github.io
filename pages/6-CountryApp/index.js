@@ -55,7 +55,7 @@ function countriesDisplay() {
           country.translations.fra.common
         }">
           <h2>${country.translations.fra.common}</h2>
-          <h4>${country.capital}</h4>
+          <h4>${country.capital}</h4>         
           <p>Population: ${country.population.toLocaleString()}</p> 
           </div>
         `
