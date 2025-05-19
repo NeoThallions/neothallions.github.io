@@ -3,13 +3,13 @@
     margin: 0;
     padding: 0;
     list-style: none;
-  text-decoration: none;
-  outline: none;
+    text-decoration: none;
+    outline: none;
 }
 
 body {
     background: #1a3d20;
-background: linear-gradient(73deg, rgba(26, 61, 32, 1) 0%, rgba(0, 9, 10, 1) 100%);
+    background: linear-gradient(73deg, rgba(26, 61, 32, 1) 0%, rgba(0, 9, 10, 1) 100%);
     min-height: 100vh;
 }
 #accueil {
@@ -29,8 +29,8 @@ background: linear-gradient(73deg, rgba(26, 61, 32, 1) 0%, rgba(0, 9, 10, 1) 100
     margin: 0 auto;
     width: 130px;
     height: 25px;
-  }
-  #accueil:hover {
+}
+#accueil:hover {
     cursor: pointer;
     scale: 1.05;
     background: #3c34498c;
@@ -77,12 +77,12 @@ h2 {
     outline: none;
     font-size: 1rem;
     background: rgb(22, 27, 48);        
-        margin: 25px auto;
-        padding-left: 20px;
-        padding-bottom: 5px;
-        border-radius: 50px;
-        color: rgb(224, 220, 213);
-        transition: 5s;
+    margin: 25px auto;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    border-radius: 50px;
+    color: rgb(224, 220, 213);
+    transition: 5s;
 }
 li {
     margin: 5px 0 10px 50px;
@@ -133,3 +133,8 @@ li:hover:after {
     left: 10px;
     transition: 0.2s;
 }
+@media screen and (max-width: 560px){  
+    .mainWindow{
+        width: 70%;
+    } 
+} 
