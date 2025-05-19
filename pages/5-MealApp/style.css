@@ -102,3 +102,7 @@ img {
 li > ul > li {
   text-align: left;
 }
+#instructions{
+  padding-top: 15px;
+  text-align: justify;
+}

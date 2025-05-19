@@ -42,6 +42,7 @@ function mealsDisplay() {
             <p>${meal.strArea}</p>
             <img src=${meal.strMealThumb} alt="photo" ${meal.strMeal}>
             <ul>${ingredients.join("")}</ul>
+            <p id="instructions">${meal.strInstructions}</p>
           </li>
           `;
       })
