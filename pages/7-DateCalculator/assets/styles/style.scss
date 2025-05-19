@@ -40,7 +40,7 @@ body {
     .card {
         margin: 150px auto;
         height: 600px;
-        width: 40%;
+        width: 500px;
         border-radius: 30px;
         background-color: rgba(240, 255, 255, 0.726);
         display: flex;
@@ -66,11 +66,11 @@ body {
                 }
             }
         }
-
+        
         form {
             display: flex;
             flex-direction: column;
-
+            
             input {
                 outline: none;
                 margin: 10px auto;
@@ -81,36 +81,38 @@ body {
                 text-align: center;
                 font-size: 1.5rem;
                 cursor: pointer;
-                @media screen and (max-width: 540px) {                    
-                    width: 70%;
+                @media screen and (max-width: 500px) {                    
+                        width: 55%;
+                        font-size: 1.2rem;
+                    }
+                }
+                
+                label {
+                    font-size: 1.2rem;
+                }
+                .PriceAreaTotal {
+                    margin: 20px;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                }
+                #validate {
+                    display: none;
+                    width: 120px;
+                    background-color: rgb(118, 59, 226);
+                    opacity: 1;
+                    color: azure;
+                }
+                #validate:hover {
+                    background-color: azure;
+                    color: rgb(118, 59, 226);
+                    border: 2px solid rgb(118, 59, 226);
+                    cursor: pointer;
                 }
             }
-
-            label {
-                font-size: 1.2rem;
+            @media screen and (max-width: 840px) {                    
+                        width: 60%;
             }
-            .PriceAreaTotal {
-                margin: 20px;
-                font-size: 1.2rem;
-                font-weight: bold;
-            }
-            #validate {
-                display: none;
-                width: 120px;
-                background-color: rgb(118, 59, 226);
-                opacity: 1;
-                color: azure;
-            }
-            #validate:hover {
-                background-color: azure;
-                color: rgb(118, 59, 226);
-                border: 2px solid rgb(118, 59, 226);
-                cursor: pointer;
+            
             }
         }
-        @media screen and (max-width: 540px) {
-            margin: 100px auto;
-            width: 70%;
-        }
-    }
-}
+        
