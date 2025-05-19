@@ -82,7 +82,7 @@ body .card form input {
 }
 @media screen and (max-width: 500px) {
   body .card form input {
-    width: 55%;
+    width: 70%;
     font-size: 1.2rem;
   }
 }
