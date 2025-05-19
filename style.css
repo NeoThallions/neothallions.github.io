@@ -35,6 +35,7 @@ li {
     margin: 10px;
     font-family: Montserrat;
     font-weight: 200;
+    text-transform: capitalize;
 }
 
 a {
