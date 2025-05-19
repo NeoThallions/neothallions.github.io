@@ -1,11 +1,12 @@
 header {
     color: $white1;
-    //   position: relative; car la nav sera placée en absolute
+    //   position: "relative" car la nav sera placée en absolute
     position: relative;
     min-height: 100vh;
 
     #accueil {
         position: fixed;
+        text-decoration: none;
         top: 10px;
         left: 10px;
         z-index: 1;
