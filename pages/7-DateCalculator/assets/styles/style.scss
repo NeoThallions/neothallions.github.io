@@ -12,6 +12,31 @@ body {
     margin: 0 auto;
     color: rgb(99, 97, 197);
 
+    #accueil {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  padding-top: 8px;
+  font-size: 6rem;
+  background-color: rgb(45, 43, 43);
+  font-family: Merriweather, serif;
+  font-size: 0.8rem;
+  text-align: center;
+  color: white;
+  border: #acceda solid 1px;
+  border-radius: 30px;
+  margin: 0 auto;
+  width: 130px;
+  height: 35px;
+}
+#accueil:hover {
+  cursor: pointer;
+  scale: 1.05;
+  background: #3c34498c;
+  transition: 0.2s;
+}
+
     .card {
         margin: 150px auto;
         height: 600px;
