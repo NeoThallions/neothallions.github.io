@@ -29,6 +29,7 @@ body #accueil {
   margin: 0 auto;
   width: 130px;
   height: 35px;
+  text-decoration: none;
 }
 body #accueil:hover {
   cursor: pointer;
