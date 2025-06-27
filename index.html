@@ -1,47 +1,138 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Porte Folio</title>
 
-    <link rel="shortcut icon" href="./icone site.jpg">
+    <link rel="shortcut icon" href="./icone site.jpg" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
 
     <script defer src="./index.js"></script>
-    
-</head>
-<body>
+  </head>
+  <body>
     <nav>
-        <div id="logo"></div>
-        <h1>Le portefolio de NeoThallions</h1>
-        <!-- <p>(encore en chantier...)</p> -->
-        <i class="fa-solid fa-face-smile-wink"></i>
+      <div id="logo"></div>
+      <h1>Le portefolio de NeoThallions</h1>
+      <!-- <p>(encore en chantier...)</p> -->
     </nav>
     <div class="sitesPart">
-        <h2>Coté Démos de Sites</h2>
-        <ul class="siteContainer">
-            <li><a href="./pages/LocMaison/index.html">Location</a></li>
-            <li><a href="./pages/1-Run/index.html">Run</a></li>
-            <li><a href="./pages/2-GamingCampus/index.html">Gaming Campus</a></li>
-            <li><a href="./pages/3-LaMontagne/index.html">La Montagne</a></li>
-            <li><a href="./pages/4-TheResto/index.html">The Resto</a></li>
-        </ul>
+      <h2>Coté Démos de Sites</h2>
+      <div class="anchor-container">
+        <a
+          href="./pages/LocMaison/index.html"
+          class="anchor"
+          data-img="img/imgLoc.jpg"
+          >Location</a
+        >
+        <div class="image-container"></div>
+      </div>
+
+      <div class="anchor-container">
+        <a
+          href="./pages/1-Run/index.html"
+          class="anchor"
+          data-img="img/imgRun.jpg"
+          >Run</a
+        >
+        <div class="image-container"></div>
+      </div>
+
+      <div class="anchor-container">
+        <a
+          href="./pages/2-GamingCampus/index.html"
+          class="anchor"
+          data-img="img/imgGaming.jpg"
+          >Gaming Campus</a
+        >
+        <div class="image-container"></div>
+      </div>
+
+      <div class="anchor-container">
+        <a
+          href="href="./pages/3-LaMontagne/index.html"
+          class="anchor"
+          data-img="img/imgMontagne.jpg"
+          >La montagne</a
+        >
+        <div class="image-container"></div>
+      </div>
+
+      <div class="anchor-container">
+        <a
+          href="./pages/4-TheResto/index.html"
+          class="anchor"
+          data-img="img/imgResto.jpg"
+          >The Resto</a
+        >
+        <div class="image-container"></div>
+      </div>
+
+      
     </div>
     <div class="appsPart">
-        <h2>Coté Démos d'Applis</h2>
-        <ul class="appContainer">
-            <li><a href="./pages/5-MealApp/index.html">petits plats sympas</a></li>
-            <li><a href="./pages/6-CountryApp/index.html">Infos sur les pays</a></li>
-            <li><a href="./pages/7-DateCalculator/index.html">Calculateur de dates</a></li>
-            <li><a href="./pages/8-TodoListApp/index.html">ToDoList</a></li>
-            <li><a href="./pages/9-JokeApp/index.html">Drôles de blagues !</a></li>
-        </ul>
+      <h2>Coté Démos d'Applis</h2>
+      <div class="anchor-container">
+        <a
+          href="./pages/5-MealApp/index.html"
+          class="anchor"
+          data-img="img/imgRecettes.jpg"
+          >Petits plats sympas</a
+        >
+        <div class="image-container"></div>
+      </div>
+
+      <div class="anchor-container">
+        <a
+          href="./pages/6-CountryApp/index.html"
+          class="anchor"
+          data-img="img/imgCountries.jpg"
+          >Infos sur les pays</a
+        >
+        <div class="image-container"></div>
+      </div>
+
+      <div class="anchor-container">
+        <a
+          href="./pages/7-DateCalculator/index.html"
+          class="anchor"
+          data-img="img/imgDate.jpg"
+          >Calculateur de dates</a
+        >
+        <div class="image-container"></div>
+      </div>
+
+      <div class="anchor-container">
+        <a
+          href="./pages/8-TodoListApp/index.html"
+          class="anchor"
+          data-img="img/imgToDo.jpg"
+          >ToDo List</a
+        >
+        <div class="image-container"></div>
+      </div>
+
+      <div class="anchor-container">
+        <a
+          href="./pages/9-JokeApp/index.html"
+          class="anchor"
+          data-img="img/imgJoke.jpg"
+          >Drôles de blagues!</a
+        >
+        <div class="image-container"></div>
+      </div>
+      
     </div>
-</body>
+  </body>
 </html>
